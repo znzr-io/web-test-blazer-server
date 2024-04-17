@@ -1,0 +1,17 @@
+﻿@using web_test_blazer_server.Shared._Core
+
+@namespace web_test_blazer_server.Shared.Airtable
+
+
+<Divider DividerType="DividerType.Dashed" />
+<Container Fluid>
+    <Row>
+        <Column Flex="Flex.JustifyContent.Start">
+            <Badge Color="Color.Primary">@Label.ToUpper()</Badge>
+        </Column>
+        <Column Flex="Flex.JustifyContent.End">
+            <Badge Color="Color.Light" TextColor="TextColor.Dark">@Id</Badge>
+        </Column>
+    </Row>
+</Container>
+<Divider DividerType="DividerType.Dashed" />

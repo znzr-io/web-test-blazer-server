@@ -1,0 +1,46 @@
+﻿@namespace web_test_blazer_server.Shared.Airtable
+
+<div class="row align-items-start table-sticky">
+    <div class="table-sticky-divider">
+        <Divider DividerType="DividerType.Dashed" Background="Background.Light" />
+    </div>
+    <div class="btn-group" role="group" aria-label="table controls">
+
+        <div class="col-1">
+            <div class="row align-items-start">
+                <div class="btn-group" role="group" aria-label="row bookmark">
+                    <TableBookmark />
+                </div>
+            </div>
+        </div>
+
+        <div class="col-8">
+            <TableSearch />
+        </div>
+
+        <div class="col-2">
+            <div class="row align-items-start">
+                <div class="btn-group" role="group" aria-label="row add">
+                    <RowNew />
+                    <FieldsSelector />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="table-sticky-divider">
+        <Divider DividerType="DividerType.Dashed" Background="Background.Light" />
+    </div>
+</div>
+<div class="table-rows-accordion">
+    <RowSingle></RowSingle>
+    <RowSingle></RowSingle>
+    <RowSingle></RowSingle>
+    <RowSingle></RowSingle>
+</div>
+<Divider DividerType="DividerType.Dashed" />
+
+
+
+
+
+

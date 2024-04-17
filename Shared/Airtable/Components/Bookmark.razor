@@ -1,0 +1,35 @@
+﻿@namespace web_test_blazer_server.Shared.Airtable
+
+
+@if (TypeBookmark == SelectionType.table)
+{
+    <DropdownDivider />
+}
+
+<DropdownItem>
+
+    <BookmarkDelete Id="@Id" AllowRemoveBookmark="@AllowRemoveBookmark" />
+
+
+    @if (TypeBookmark == SelectionType.table)
+    {
+        <RowSelect Id="@Id" Label="@Label" ColorSelector="Color.Light" />
+    }
+    else
+    {
+        <RowSelect Id="@Id" Label="@Label" ColorSelector="Color.Default" />
+    }
+
+
+    @if (HasNewItem && TypeBookmark == SelectionType.table)
+    {
+        <RowNew />
+    }
+
+</DropdownItem>
+
+
+@if (TypeBookmark == SelectionType.table)
+{
+    <DropdownDivider />
+}

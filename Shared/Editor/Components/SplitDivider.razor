@@ -1,0 +1,21 @@
+﻿@using web_test_blazer_server.Shared.Airtable;
+
+@namespace web_test_blazer_server.Shared.Editor
+
+<div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+    <div class="btn-group">
+        <div class="btn-group">
+            <div class="btn-group" role="group" aria-label="Basic example">
+                <Selector Label="WORKSPACE" IconSelection="IconName.LayerGroup" TypeSelection="SelectionType.workspace" />
+                <Selector Label="TABLE" IconSelection="IconName.Table" TypeSelection="SelectionType.table" />
+                <Selector Label="ROW" IconSelection="IconName.Bars" TypeSelection="SelectionType.row" />
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-group">
+        <div class="btn-group" role="group" aria-label="Basic example">
+            <ViewCenter NameIcon="IconName.Sort"></ViewCenter>
+        </div>
+    </div>
+</div>

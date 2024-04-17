@@ -1,0 +1,32 @@
+﻿@using web_test_blazer_server.Shared.Airtable
+
+@namespace web_test_blazer_server.Shared.Editor
+
+
+<div class="row align-items-start editor-footer-bar">
+    <div class="btn-group" role="group" aria-label="row controls">
+        <div class="col-1">
+            <div class="row align-items-start">
+                <div class="btn-group" role="group" aria-label="row bookmark">
+                    <Sync></Sync>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-10">
+            <div class="row">
+                <div class="col">
+                    <LogCatcher></LogCatcher>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-1">
+            <div class="row align-items-end">
+                <div class="btn-group" role="group" aria-label="row delete & duplicate">
+                    <ToggleEditor></ToggleEditor>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

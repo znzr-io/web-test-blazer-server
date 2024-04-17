@@ -1,0 +1,66 @@
+﻿@using web_test_blazer_server.Shared.Editor
+
+@namespace web_test_blazer_server.Shared.Airtable
+
+@inherits HandlePointerSelection;
+
+@{
+    base.BuildRenderTree(__builder);
+}
+
+
+<Tabs SelectedTab="@selectedTab" SelectedTabChanged="@OnSelectedTabChanged">
+
+    <Content>
+
+        <TabPanel Name="home">
+            <AllInputs />
+        </TabPanel>
+
+        <TabPanel Name="settings">
+            
+        </TabPanel>
+
+        <TabPanel Name="text">
+            <EditorTable />
+        </TabPanel>
+
+        <TabPanel Name="media">
+
+        </TabPanel>
+
+        <TabPanel Name="agenda">
+            <AllInputs />
+        </TabPanel>
+
+
+        <TabPanel Name="variables">
+            <TableVars />
+            <RowVars />
+        </TabPanel>
+
+
+    </Content>
+
+    <Items>
+        <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups" style="width : 100%;">
+            <div class="btn-group">
+                <HomeTabSelect Label="home" IconsName="IconName.Home" ToolTip="home" IconColor="TextColor.Light" BackgroundColor="Background.Primary" />
+
+                <GroupTabSelect Label="settings" IconsName="IconName.Settings" ToolTip="settings" />
+                <GroupTabSelect Label="text" IconsName="IconName.Language" ToolTip="text" />
+                <GroupTabSelect Label="media" IconsName="IconName.Images" ToolTip="media" />
+                <GroupTabSelect Label="agenda" IconsName="IconName.CalendarDay" ToolTip="agenda" />
+
+                <VariableTabSelect Label="variables" IconsName="IconName.Code" ToolTip="variables" IconColor="TextColor.Light" BackgroundColor="Background.Dark" />
+
+            </div>
+
+            <div class="btn-group">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <ViewTop NameIcon="IconName.SortDown" />
+                </div>
+            </div>
+        </div>
+    </Items>
+</Tabs>

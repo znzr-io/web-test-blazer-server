@@ -1,0 +1,24 @@
+﻿@page "/editor"
+
+@using web_test_blazer_server.Shared.Airtable
+@using web_test_blazer_server.Shared.Editor
+
+<PageTitle>Editor</PageTitle>
+
+<div class="row">
+    <Splitter Style="height: 100vh;">
+        <SplitterSection Style="height: 100%;" Size="100">
+            <SplitWebsite />
+        </SplitterSection>
+        <SplitterSection MinSize="400" MaxSize="600" Style="height: 100%;">
+            <Splitter Direction="SplitterDirection.Vertical" Style="height: 100%; overflow: hidden; padding: 3px;">
+                <SplitterSection MinSize="120" Style="@editorUpperSplit">
+                    <SplitSelection />
+                </SplitterSection>
+                <SplitterSection MinSize="250" Style="@editorDownSplit">
+                    <SplitStructure />
+                </SplitterSection>
+            </Splitter>
+        </SplitterSection>
+    </Splitter>
+</div>

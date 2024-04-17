@@ -1,0 +1,51 @@
+﻿@using web_test_blazer_server.Shared.Editor
+
+@namespace web_test_blazer_server.Shared.Airtable
+
+
+
+<Tabs SelectedTab="@selectedTab" SelectedTabChanged="@OnSelectedTabChanged">
+
+    <Content>
+        <TabPanel Name="content">
+            <Tables></Tables>
+        </TabPanel>
+        <TabPanel Name="website">
+            <Tables></Tables>
+        </TabPanel>
+        <TabPanel Name="files">
+            <Tables></Tables>
+        </TabPanel>
+        <TabPanel Name="brand">
+            <Tables></Tables>
+        </TabPanel>
+        <TabPanel Name="console">
+            <Console></Console>
+        </TabPanel>
+    </Content>
+
+    <Items>
+        <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups" style="width : 100%;">
+            <div class="btn-group">
+                <Bookmarks></Bookmarks>
+
+                <WorkspaceTabSelect Label="content" IconsName="IconName.Shapes" ToolTip="content" />
+                <WorkspaceTabSelect Label="website" IconsName="IconName.Globe" ToolTip="website" />
+                <WorkspaceTabSelect Label="files" IconsName="IconName.File" ToolTip="files" />
+                <WorkspaceTabSelect Label="brand" IconsName="IconName.Shield" ToolTip="brand" />
+                    
+                <Tab Name="console">
+                    <Tooltip Text="console">
+                        <Icon Name="IconName.Bug" />
+                    </Tooltip>
+                </Tab>
+            </div>
+            <div class="btn-group">
+                <div class="btn-group" role="group" aria-label="Basic example">
+                    <ToggleAccordion />
+                    <ViewBot NameIcon="IconName.SortUp"/>
+                </div>
+            </div>
+        </div>
+    </Items>
+</Tabs>

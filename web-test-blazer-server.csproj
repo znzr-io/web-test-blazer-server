@@ -1,0 +1,65 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>web_test_blazer_server</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <None Remove="Data\Airtable\" />
+    <None Remove="Data\Nav\" />
+    <None Remove="Design\" />
+    <None Remove="Data\Airtable\tables\" />
+    <None Remove="Shared\Airtable\" />
+    <None Remove="Shared\Editor\" />
+    <None Remove="Shared\_Core\" />
+    <None Remove="Shared\_Site\" />
+    <None Remove="Shared\Airtable\Widgets\" />
+    <None Remove="Shared\Editor\Components\" />
+    <None Remove="Shared\Editor\Splitters\" />
+    <None Remove="Shared\Editor\Events\" />
+    <None Remove="Shared\_Core\Actions\" />
+    <None Remove="Shared\_Core\Actions\_Core\" />
+    <None Remove="Shared\Airtable\Enums\" />
+    <None Remove="Shared\Airtable\Actions\_Core\" />
+    <None Remove="Shared\Airtable\Events\" />
+    <None Remove="Shared\_Core\Events\" />
+    <None Remove="Shared\Editor\_Core\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Data\Airtable\" />
+    <Folder Include="Data\Nav\" />
+    <Folder Include="Design\" />
+    <Folder Include="Data\Airtable\tables\" />
+    <Folder Include="wwwroot\css\blazorise\" />
+    <Folder Include="Shared\Airtable\" />
+    <Folder Include="Shared\Editor\" />
+    <Folder Include="Shared\_Core\" />
+    <Folder Include="Shared\_Site\" />
+    <Folder Include="Shared\Airtable\Widgets\" />
+    <Folder Include="Shared\Editor\Components\" />
+    <Folder Include="Shared\Editor\Splitters\" />
+    <Folder Include="Shared\Editor\Events\" />
+    <Folder Include="Shared\_Core\Actions\" />
+    <Folder Include="Shared\_Core\Actions\_Core\" />
+    <Folder Include="Shared\Airtable\Enums\" />
+    <Folder Include="Shared\Airtable\Actions\_Core\" />
+    <Folder Include="Shared\Airtable\Events\" />
+    <Folder Include="Shared\_Core\Events\" />
+    <Folder Include="Shared\Editor\_Core\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Airtable" Version="1.4.0" />
+    <PackageReference Include="Blazorise.Bootstrap5" Version="1.5.1" />
+    <PackageReference Include="Blazorise.Icons.FontAwesome" Version="1.5.1" />
+    <PackageReference Include="Blazorise.Splitter" Version="1.5.1" />
+    <PackageReference Include="Blazorise.Components" Version="1.5.1" />
+    <PackageReference Include="BuildWebCompiler" Version="1.12.405" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\css\blazorise\" />
+  </ItemGroup>
+</Project>
