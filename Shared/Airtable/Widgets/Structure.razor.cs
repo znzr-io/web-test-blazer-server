@@ -10,7 +10,7 @@ namespace web_test_blazer_server.Shared.Airtable
     {
         Dropdown? dropdown;
 
-        string selectedTab = "content";
+        string selectedTab = "console";
 
         private Task OnSelectedTabChanged(string name)
         {

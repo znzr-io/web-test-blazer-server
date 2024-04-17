@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Components;
 
 namespace web_test_blazer_server.Shared.Airtable
 {
-	public class ArgsPointerSelection : EventArgs
+	public class PointerSelection_Args : EventArgs
 	{
         public string IdRecord { get; set; } = "row id";
 

@@ -3,6 +3,12 @@ using Microsoft.AspNetCore.Components.Web;
 using web_test_blazer_server.Data;
 using web_test_blazer_server.Data.Airtable;
 using web_test_blazer_server.Data.Nav;
+using web_test_blazer_server.Shared._Core;
+using web_test_blazer_server.Shared._Site;
+using web_test_blazer_server.Shared.Editor;
+using web_test_blazer_server.Shared.Airtable;
+
+
 using Blazorise;
 using Blazorise.Bootstrap5;
 using Blazorise.Icons.FontAwesome;
@@ -12,8 +18,14 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
+
 builder.Services.AddSingleton<MainNavMenuService>();
 builder.Services.AddSingleton<WeatherForecastService>();
+
+builder.Services.AddScoped<LogCatcher_Service>();
+builder.Services.AddScoped<EditorView_Service>();
+builder.Services.AddScoped<EditorVisibility_Service>();
+
 builder.Services
     .AddBlazorise(options =>
     {
@@ -35,4 +47,7 @@ app.UseRouting();
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 app.Run();
+
+
+
 

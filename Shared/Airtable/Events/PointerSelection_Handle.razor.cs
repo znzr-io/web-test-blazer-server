@@ -5,12 +5,11 @@ using web_test_blazer_server.Data.Airtable;
 using web_test_blazer_server.Shared.Airtable;
 
 
-
-namespace web_test_blazer_server.Shared._Core
+namespace web_test_blazer_server.Shared._Services
 {
-	public partial class HandlePointerSelection
+	public partial class PointerSelection_Handle
     {
-        ArgsPointerSelection? argsSelect;
+        PointerSelection_Args? argsSelect;
 
         public string IdRecord { get; set; } = "row id";
 
@@ -27,7 +26,7 @@ namespace web_test_blazer_server.Shared._Core
 
         protected override async Task OnInitializedAsync()
         {
-
+            /*
            pointerSelection += (o, args) =>
            {
                IdRecord = args.IdRecord;
@@ -41,6 +40,7 @@ namespace web_test_blazer_server.Shared._Core
                //refresh ui
                StateHasChanged();
            };
+            */
 
            await Task.CompletedTask;
         }

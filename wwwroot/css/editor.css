@@ -171,3 +171,27 @@
     margin-top : 4px;
     margin-bottom : 4px;
 }
+
+.btn-open-editor {
+    
+}
+
+.open-editor-container {
+    margin: 0;
+    padding: 0;
+    width: 40px;
+    position: fixed;
+    bottom: 20px;
+    right: 22px;
+}
+
+.btn-open-log {
+    padding: 0 !important;
+    vertical-align: middle !important;
+    cursor: pointer !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    user-select: none !important;
+    border: none !important;
+    background-color: none !important;
+}

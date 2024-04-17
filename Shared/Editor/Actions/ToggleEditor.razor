@@ -1,6 +1,6 @@
 ﻿@namespace web_test_blazer_server.Shared.Editor
 
-@inherits ABase;
+@inherits APreBase_EditorVisibility;
 
 @{
     base.BuildRenderTree(__builder);
@@ -8,6 +8,6 @@
 
 
 
-<Button Color="Color.Primary" Clicked="@OnInvoke">
-    <Icon Name="IconName.ArrowRight" />
+<Button Color="Color.Primary" Clicked="@OnInvoke" Class="btn-open-editor">
+    <Icon Name="@NameIcon" />
 </Button>

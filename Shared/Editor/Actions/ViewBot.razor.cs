@@ -11,7 +11,7 @@ namespace web_test_blazer_server.Shared.Editor
     {
         public async Task OnInvoke()
         {
-            await EditorViewHandle(Pages.Editor.EditorSplitView.bottomShow);
+            await EditorViewHandle(Pages.Editor.EditorSplitView.bottomShow, this);
             await LogHandle("EDITOR", "focus bot");
         }
     }

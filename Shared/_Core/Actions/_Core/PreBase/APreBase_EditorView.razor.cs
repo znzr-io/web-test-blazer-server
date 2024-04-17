@@ -1,0 +1,28 @@
+﻿using System;
+using AirtableApiClient;
+using Blazorise;
+using Microsoft.AspNetCore.Components;
+using web_test_blazer_server.Shared._Core;
+using web_test_blazer_server.Shared._Services;
+using web_test_blazer_server.Shared.Editor;
+
+
+
+namespace web_test_blazer_server.Shared._Core
+{
+    public partial class APreBase_EditorView
+    {
+        [Parameter]
+        public IconName NameIcon { get; set; }
+
+
+
+        public async Task EditorViewHandle(Pages.Editor.EditorSplitView _editorView, APreBase_EditorView _editorViewToggle)
+        {
+            editorView_Service.ToggleEditorView(_editorView, _editorViewToggle);
+
+            await Task.CompletedTask;
+        }
+    }
+}
+

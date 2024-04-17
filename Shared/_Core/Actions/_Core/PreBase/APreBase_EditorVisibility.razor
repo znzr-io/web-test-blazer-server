@@ -1,7 +1,9 @@
 ﻿@namespace web_test_blazer_server.Shared._Core
 @using web_test_blazer_server.Shared._Core;
 
-@inherits APostBase_LogCatcher;
+@inject EditorVisibility_Service editorVisibility_Service;
+
+@inherits ABase;
 
 @{
     base.BuildRenderTree(__builder);

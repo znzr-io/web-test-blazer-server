@@ -11,7 +11,7 @@ namespace web_test_blazer_server.Shared.Editor
     {
         public async Task OnInvoke()
         {
-            await EditorViewHandle(Pages.Editor.EditorSplitView.center);
+            await EditorViewHandle(Pages.Editor.EditorSplitView.center, this);
             await LogHandle("EDITOR", "focus center");
         }
     }

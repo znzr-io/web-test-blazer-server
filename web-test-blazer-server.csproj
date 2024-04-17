@@ -20,14 +20,15 @@
     <None Remove="Shared\Airtable\Widgets\" />
     <None Remove="Shared\Editor\Components\" />
     <None Remove="Shared\Editor\Splitters\" />
-    <None Remove="Shared\Editor\Events\" />
     <None Remove="Shared\_Core\Actions\" />
     <None Remove="Shared\_Core\Actions\_Core\" />
     <None Remove="Shared\Airtable\Enums\" />
     <None Remove="Shared\Airtable\Actions\_Core\" />
     <None Remove="Shared\Airtable\Events\" />
-    <None Remove="Shared\_Core\Events\" />
     <None Remove="Shared\Editor\_Core\" />
+    <None Remove="Shared\Editor\Events\" />
+    <None Remove="Shared\_Core\Actions\_Core\PreBase\" />
+    <None Remove="Shared\_Core\Actions\_Core\PostBase\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\Airtable\" />
@@ -42,14 +43,15 @@
     <Folder Include="Shared\Airtable\Widgets\" />
     <Folder Include="Shared\Editor\Components\" />
     <Folder Include="Shared\Editor\Splitters\" />
-    <Folder Include="Shared\Editor\Events\" />
     <Folder Include="Shared\_Core\Actions\" />
     <Folder Include="Shared\_Core\Actions\_Core\" />
     <Folder Include="Shared\Airtable\Enums\" />
     <Folder Include="Shared\Airtable\Actions\_Core\" />
     <Folder Include="Shared\Airtable\Events\" />
-    <Folder Include="Shared\_Core\Events\" />
     <Folder Include="Shared\Editor\_Core\" />
+    <Folder Include="Shared\Editor\Events\" />
+    <Folder Include="Shared\_Core\Actions\_Core\PreBase\" />
+    <Folder Include="Shared\_Core\Actions\_Core\PostBase\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Airtable" Version="1.4.0" />

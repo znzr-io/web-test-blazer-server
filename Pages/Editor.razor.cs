@@ -8,16 +8,16 @@ namespace web_test_blazer_server.Pages
 {
     public partial class Editor
     {
+        bool ShowEditor { get; set; } = true;
         double editorUpperSplitViewTop = 68;
         double editorUpperSplitViewCenter = 50;
         double editorUpperSplitViewBottom = 24.2;
         EditorSplitView currentView = EditorSplitView.center;
-        ABaseEditorView? viewTop;
-        ABaseEditorView? viewBot;
+        APreBase_EditorView? viewTop;
+        APreBase_EditorView? viewBot;
 
         protected string editorUpperSplit = "";
         protected string editorDownSplit = "";
-
 
         public enum EditorSplitView
         {
@@ -39,18 +39,33 @@ namespace web_test_blazer_server.Pages
 
         protected override async Task OnInitializedAsync()
         {
-            updateEditorView += (o, args) =>
-            {
-                SetEditorAirtableSplit(args.EditorView, args.EditorViewToggle);
-                //refresh ui
-                StateHasChanged();
-            };
+            editorView_Service.EditorViewToggled += Toggler;
+            editorVisibility_Service.EditorVisibilityToggled += StateHasChanged;
             await Task.CompletedTask;
         }
 
 
 
-        void SetEditorAirtableSplit(EditorSplitView view, ABaseEditorView viewToggle)
+        void Toggler()
+        {
+            {
+                SetEditorAirtableSplit(editorView_Service.EditorView, editorView_Service.EditorViewToggle);
+                //refresh ui
+                StateHasChanged();
+            };
+        }
+
+
+
+        public void Dispose()
+        {
+            editorView_Service.EditorViewToggled -= Toggler;
+            editorVisibility_Service.EditorVisibilityToggled -= StateHasChanged;
+        }
+
+
+
+        void SetEditorAirtableSplit(EditorSplitView view, APreBase_EditorView viewToggle)
         {
             if (view == EditorSplitView.topShow)
                 ShowTop(view, viewToggle);
@@ -64,7 +79,7 @@ namespace web_test_blazer_server.Pages
 
 
 
-        void ShowTop(EditorSplitView view, ABaseEditorView viewToggle)
+        void ShowTop(EditorSplitView view, APreBase_EditorView viewToggle)
         {
             viewTop = viewToggle;
 
@@ -91,7 +106,7 @@ namespace web_test_blazer_server.Pages
 
 
 
-        void ShowCenter(EditorSplitView view, ABaseEditorView viewToggle)
+        void ShowCenter(EditorSplitView view, APreBase_EditorView viewToggle)
         {
             currentView = EditorSplitView.center;
 
@@ -109,7 +124,7 @@ namespace web_test_blazer_server.Pages
 
 
 
-        void ShowBot(EditorSplitView view, ABaseEditorView viewToggle)
+        void ShowBot(EditorSplitView view, APreBase_EditorView viewToggle)
         {
             viewBot = viewToggle;
 
