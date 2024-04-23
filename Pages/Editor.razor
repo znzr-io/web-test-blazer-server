@@ -1,7 +1,7 @@
 ﻿@page "/editor"
 
 @using web_test_blazer_server.Shared.Airtable
-@using web_test_blazer_server.Shared.Editor
+@using web_test_blazer_server.Shared._Editor
 @using web_test_blazer_server.Pages
 
 @implements IDisposable
@@ -11,22 +11,22 @@
 
 
 <PageTitle>Editor</PageTitle>
+<P_Hidden IdParentMenu="root" IdMenuItem="editor" />
 
 <div class="row">
     @if (editorVisibility_Service.ShowEditor == true)
     {
         <Splitter Style="height: 100vh;">
             <SplitterSection Style="height: 100%;" Size="100">
-
-                <SplitWebsite />
+                <PNL_Website />
             </SplitterSection>
             <SplitterSection MinSize="400" MaxSize="600" Style="height: 100%;">
                 <Splitter Direction="SplitterDirection.Vertical" Style="height: 100%; overflow: hidden; padding: 3px;">
                     <SplitterSection MinSize="120" Style="@editorUpperSplit">
-                        <SplitSelection />
+                        <PNL_Selection IdParentMenu="editor" IdMenuItem="selection" />
                     </SplitterSection>
                     <SplitterSection MinSize="250" Style="@editorDownSplit">
-                        <SplitStructure />
+                        <PNL_Structure IdParentMenu="editor" IdMenuItem="workspace" />
                     </SplitterSection>
                 </Splitter>
             </SplitterSection>
@@ -35,10 +35,9 @@
     }
     else
     {
-        <SplitWebsite />
-        <Div class="open-editor-container">
-            <ToggleEditor ButtonType="ToggleEditor.ToggleEditorState.openEditor" />
-        </Div>
+        <PNL_Website />
+        <div class="open-editor-container">
+            <A_ToggleEditorVisibility ButtonVariant="StateVisibility.SetVisible" />
+        </div>
     }
-
 </div>

@@ -195,3 +195,57 @@
     border: none !important;
     background-color: none !important;
 }
+
+.btn-open-log .alert{
+    margin : 0;
+}
+
+.btn-group-center {
+    flex-grow: 1;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+.panel-editor-head-left {
+}
+.panel-editor-head-center {
+    width: 100%;
+}
+.panel-editor-head-right {}
+.panel-editor-content-pre {}
+.panel-editor-content {
+    width : 100%;
+}
+.panel-editor-content-post {}
+.panel-editor-foot-left {}
+.panel-editor-foot-center {
+    width: 100%;
+}
+.panel-editor-foot-right {}
+
+
+.tab-content .panel-editor-content-pre .tab-pane,
+.tab-content .panel-editor-content .tab-pane,
+.tab-content .panel-editor-content-right .tab-pane {
+    display: none;
+}
+
+.tab-content .panel-editor-content-pre .show,
+.tab-content .panel-editor-content .show,
+.tab-content .panel-editor-content-right .show {
+    display: block;
+}
+
+
+
+/* ############### FIELDS ############### */
+
+.rating-disabled, .rating-readonly {
+    cursor : not-allowed;
+    opacity : 0.5;
+}
+
+.b-input-color-picker.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}

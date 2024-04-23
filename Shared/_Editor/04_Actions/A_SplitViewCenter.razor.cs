@@ -1,0 +1,20 @@
+﻿using System;
+using System.Net.NetworkInformation;
+using Blazorise;
+using Microsoft.AspNetCore.Components;
+using web_test_blazer_server.Data.Airtable;
+
+
+
+namespace web_test_blazer_server.Shared._Editor
+{
+	public partial class A_SplitViewCenter
+    {
+        public async Task OnInvoke()
+        {
+            await EditorViewHandle(Pages.Editor.EditorSplitView.center, this);
+            logCatcher_Service.CatchLog("EDITOR", "focus center");
+            await Task.CompletedTask;
+        }
+    }
+}

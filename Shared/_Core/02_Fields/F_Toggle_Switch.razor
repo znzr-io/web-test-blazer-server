@@ -1,0 +1,16 @@
+﻿@namespace web_test_blazer_server.Shared._Core
+@using web_test_blazer_server.Shared._Core;
+@inherits FieldBase_Toggle;
+
+@{
+    base.BuildRenderTree(__builder);
+}
+
+
+
+<FW_Main BadgeColor="@BadgeColor" BadgeLabel="@BadgeLabel" ToolTipText="@ToolTipText">
+    <Switch TValue="bool" Checked="@Val" CheckedChanged="@OnToggleChanged" />
+</FW_Main>
+
+
+

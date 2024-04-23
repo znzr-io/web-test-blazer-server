@@ -1,0 +1,73 @@
+﻿@namespace web_test_blazer_server.Shared.Airtable
+@inject Pointer_Service pointer_Service;
+@implements IDisposable
+@inherits BasePanel;
+
+@{
+    base.BuildRenderTree(__builder);
+}
+
+
+
+<PanelEditor SelectedTab="@SelectedTab" SelectedTabChanged="@OnSelectedTabChanged">
+    <HeadLeft>
+        <P_Bookmarks ToolTip="bookmarks" />
+        <!--loop-->
+        <P_GroupTab IdParentMenu="@IdMenuItem" IdMenuItem="settings" Label="settings" NameIcon="IconName.Settings" ToolTip="settings" />
+        <P_GroupTab IdParentMenu="@IdMenuItem" IdMenuItem="text" Label="text" NameIcon="IconName.Language" ToolTip="text" />
+        <P_GroupTab IdParentMenu="@IdMenuItem" IdMenuItem="media" Label="media" NameIcon="IconName.Images" ToolTip="media" />
+        <P_GroupTab IdParentMenu="@IdMenuItem" IdMenuItem="agenda" Label="agenda" NameIcon="IconName.CalendarDay" ToolTip="agenda" />
+        <!--loop end-->
+        <!-- @SelectedTab = "settings";-->
+    </HeadLeft>
+    <HeadRight>
+        <A_SplitViewTop NameIcon="IconName.SortDown" />
+    </HeadRight>
+
+    <Content>
+
+        <!--loop-->
+
+        <TabPanel Name="home">
+            <AllInputs />
+        </TabPanel>
+
+        <TabPanel Name="settings">
+
+        </TabPanel>
+
+        <TabPanel Name="text">
+            <W_EditorTable />
+        </TabPanel>
+
+        <TabPanel Name="media">
+
+        </TabPanel>
+
+        <TabPanel Name="agenda">
+            <AllInputs />
+        </TabPanel>
+
+
+        <TabPanel Name="variables">
+            <A_TableVars />
+            <A_RowVars />
+        </TabPanel>
+
+
+
+        <!--loop end-->
+        <!--hidden-->
+        <!--end hidden-->
+    </Content>
+
+    <FootLeft>
+        <P_SelectorDropdown Group1Label="WORKSPACE" ShowLabel="true" ShowIconGroup="true" ShowIconItem="true" NameIcon="IconName.LayerGroup" />
+        <P_SelectorDropdown Group1Label="TABLE" ShowLabel="true" ShowIconGroup="true" ShowIconItem="true" NameIcon="IconName.Table" />
+        <P_SelectorDropdown Group1Label="ROW" ShowLabel="true" ShowIconGroup="true" ShowIconItem="true" NameIcon="IconName.Bars" />
+    </FootLeft>
+    <FootRight>
+        <A_ExpandToggleAccordion />
+        <A_SplitViewCenter NameIcon="IconName.Sort" />
+    </FootRight>
+</PanelEditor>

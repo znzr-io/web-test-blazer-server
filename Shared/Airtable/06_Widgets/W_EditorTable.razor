@@ -1,0 +1,136 @@
+﻿@using web_test_blazer_server.Shared._Core
+
+@namespace web_test_blazer_server.Shared.Airtable
+
+<FW_Group HeaderLabel="Text" RowLabel="All Inputs">
+    <FW_GroupSub>
+        <F_Text_Short Placeholder="text" Val="valueToPlace" ToolTipText="tooltip text" BadgeLabel="Field Text" />
+    </FW_GroupSub>
+    <FW_GroupSub>
+        <F_Text_Email Placeholder="email" Val="name@website.com" ToolTipText="tooltip email" BadgeLabel="Field Email" />
+        <F_Text_Url Placeholder="url" Val="www.website.com" ToolTipText="tooltip url" BadgeLabel="Field Url" />
+        <F_Text_Phone Placeholder="phone number" Val="+312012345678" ToolTipText="tooltip phone" BadgeLabel="Field Phone" />
+    </FW_GroupSub>
+    <FW_GroupSub>
+        <F_Text_Search Placeholder="search..." ToolTipText="tooltip search" BadgeLabel="Field Search" />
+        <F_Text_Password ToolTipText="tooltip password" BadgeLabel="Field Password" />
+    </FW_GroupSub>
+</FW_Group>
+
+<FW_Group HeaderLabel="Text Disable" RowLabel="All Inputs">
+    <FW_GroupSub>
+        <F_Text_Short Disabled="true" Placeholder="text" Val="valueToPlace" ToolTipText="tooltip text" BadgeLabel="Field Text" />
+    </FW_GroupSub>
+    <FW_GroupSub>
+        <F_Text_Email Disabled="true" Placeholder="email" Val="name@website.com" ToolTipText="tooltip email" BadgeLabel="Field Email" />
+        <F_Text_Url Disabled="true" Placeholder="url" Val="www.website.com" ToolTipText="tooltip text" BadgeLabel="Field Url" />
+        <F_Text_Phone Disabled="true" Placeholder="phone number" Val="+312012345678" ToolTipText="tooltip text" BadgeLabel="Field Phone" />
+    </FW_GroupSub>
+</FW_Group>
+
+<FW_Group HeaderLabel="Text ReadOnly" RowLabel="All Inputs">
+    <FW_GroupSub>
+        <F_Text_Short ReadOnly="true" Placeholder="text" Val="valueToPlace" ToolTipText="tooltip text" BadgeLabel="Field Text" />
+    </FW_GroupSub>
+    <FW_GroupSub>
+        <F_Text_Email ReadOnly="true" Placeholder="email" Val="name@website.com" ToolTipText="tooltip email" BadgeLabel="Field Email" />
+        <F_Text_Url ReadOnly="true" Placeholder="url" Val="www.website.com" ToolTipText="tooltip text" BadgeLabel="Field Url" />
+        <F_Text_Phone ReadOnly="true" Placeholder="phone number" Val="+312012345678" ToolTipText="tooltip text" BadgeLabel="Field Phone" />
+    </FW_GroupSub>
+</FW_Group>
+
+<FW_Group HeaderLabel="Text Long" RowLabel="All Inputs">
+    <FW_GroupSub>
+        <F_Text_Long Placeholder="text" Val="valueToPlace" ToolTipText="tooltip text long" BadgeLabel="Field Text Long" />
+    </FW_GroupSub>
+    <FW_GroupSub>
+        <F_Text_Long AutoSize="true" Rows="3" ReplaceTab="true" TabSize="4" Placeholder="text" Val="valueToPlace" ToolTipText="tooltip text long" BadgeLabel="Field Text Long" />
+    </FW_GroupSub>
+</FW_Group>
+
+<FW_Group HeaderLabel="Number" RowLabel="All Inputs">
+    <FW_GroupSub>
+        <F_Text_Short Placeholder="place1" Val="valueToPlace" ToolTipText="tooltip text" BadgeLabel="labelText" />
+        <F_Text_Short Placeholder="place2" Val="valueToPlace" />
+        <F_Text_Short Placeholder="place3" Val="valueToPlace" />
+    </FW_GroupSub>
+    <FW_GroupSub>
+        <F_Text_Short Placeholder="place4" Val="valueToPlace" />
+        <F_Text_Short Placeholder="place5" Val="valueToPlace" />
+    </FW_GroupSub>
+</FW_Group>
+
+<FW_Group HeaderLabel="Date Time" RowLabel="All Inputs">
+    <FW_GroupSub>
+        <F_Text_Short Placeholder="place1" Val="valueToPlace" ToolTipText="tooltip text" BadgeLabel="labelText" />
+        <F_Text_Short Placeholder="place2" Val="valueToPlace" />
+        <F_Text_Short Placeholder="place3" Val="valueToPlace" />
+    </FW_GroupSub>
+    <FW_GroupSub>
+        <F_Text_Short Placeholder="place4" Val="valueToPlace" />
+        <F_Text_Short Placeholder="place5" Val="valueToPlace" />
+    </FW_GroupSub>
+</FW_Group>
+
+<FW_Group HeaderLabel="Color" RowLabel="All Inputs">
+    <FW_GroupSub>
+        <F_Color InitVal="#FF00FF" Placeholder="color" ToolTipText="tooltip text" BadgeLabel="All Color" ShowHueSlider="true" ShowPalette="true" ShowCancelButton="true" ShowClearButton="true" ShowInputField="true" ShowOpacitySlider="true" />
+        <F_Color Placeholder="color" Val="#FF00FF" ToolTipText="tooltip text" BadgeLabel="Basic Color" />
+        <F_Color Placeholder="color" Val="#FF00FF" ToolTipText="tooltip text" BadgeLabel="Field Hue" ShowHueSlider="true" ShowPalette="true" />
+    </FW_GroupSub>
+    <FW_GroupSub>
+        <F_Color Placeholder="color" Val="#FF00FF" ToolTipText="tooltip text" BadgeLabel="Bootstrap Color" />
+    </FW_GroupSub>
+    <FW_GroupSub>
+        <F_Color Disabled="true" Placeholder="color" Val="#FF00FF" ToolTipText="tooltip text" BadgeLabel="Disabled Color" />
+        <F_Color ReadOnly="true" Placeholder="color" Val="#FF00FF" ToolTipText="tooltip text" BadgeLabel="ReadOnly Color" />
+    </FW_GroupSub>
+</FW_Group>
+
+<FW_Group HeaderLabel="Toggle" RowLabel="All Inputs">
+    <FW_GroupSub>
+        <F_Toggle ToolTipText="tooltip text" BadgeLabel="Field Toggle" Val="true"/>
+    </FW_GroupSub>
+    <FW_GroupSub>
+        <F_Toggle_Switch ToolTipText="tooltip text" BadgeLabel="Field Toggle" Val="true" />
+    </FW_GroupSub>
+</FW_Group>
+
+<FW_Group HeaderLabel="Single Select" RowLabel="All Inputs">
+    <FW_GroupSub>
+
+    </FW_GroupSub>
+    <FW_GroupSub>
+
+    </FW_GroupSub>
+</FW_Group>
+
+<FW_Group HeaderLabel="Multi Select" RowLabel="All Inputs">
+    <FW_GroupSub>
+
+    </FW_GroupSub>
+    <FW_GroupSub>
+
+    </FW_GroupSub>
+</FW_Group>
+
+<FW_Group HeaderLabel="Rating" RowLabel="All Inputs">
+    <FW_GroupSub>
+        <F_Rating InitVal="5" ColorRating="Color.Danger" ToolTipText="tooltip text" BadgeLabel="Field Rating" ToolTip_Show="true" />
+        @code{string[] ttt = { "bad", "ok", "good", "", "", "", "", "", "", "" }; }
+        <F_Rating ColorRating="Color.Danger" ToolTipText="tooltip text" BadgeLabel="Field Rating" MaxValue="3" ToolTip_Text="@ttt" ToolTip_Show="true" Tooltip_ShowArrow="false" />
+    </FW_GroupSub>
+    <FW_GroupSub>
+        <F_Rating Disabled="true" BadgeLabel="Rating Disabled" ToolTipText="tooltip text" />
+        <F_Rating ReadOnly="true" BadgeLabel="Rating ReadOnly" ToolTipText="tooltip text" />
+    </FW_GroupSub>
+</FW_Group>
+
+<FW_Group HeaderLabel="File" RowLabel="All Inputs">
+    <FW_GroupSub>
+
+    </FW_GroupSub>
+    <FW_GroupSub>
+
+    </FW_GroupSub>
+</FW_Group>

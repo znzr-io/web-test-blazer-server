@@ -1,0 +1,16 @@
+﻿@namespace web_test_blazer_server.Shared._Core
+@using web_test_blazer_server.Shared._Core;
+@inherits FieldBase_Color;
+
+@{
+    base.BuildRenderTree(__builder);
+}
+
+
+
+<FW_Main BadgeColor="@BadgeColor" BadgeLabel="@BadgeLabel" ToolTipText="@ToolTipText">
+    <ColorPicker Disabled="@Disabled" ReadOnly="@ReadOnly" @bind-Color="@Val" ShowHueSlider="@ShowHueSlider" ShowCancelButton="@ShowCancelButton" ShowClearButton="@ShowClearButton" ShowInputField="@ShowInputField" ShowOpacitySlider="@ShowOpacitySlider" ShowPalette="@ShowPalette" />
+</FW_Main>
+
+
+

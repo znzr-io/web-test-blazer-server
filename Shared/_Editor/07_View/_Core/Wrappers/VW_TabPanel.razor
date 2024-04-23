@@ -1,0 +1,15 @@
+﻿@using web_test_blazer_server.Shared.Airtable
+@namespace web_test_blazer_server.Shared._Editor
+
+
+
+@if (IsTabContent == true)
+{
+    <TabPanel Name="@Label">
+        @ChildContent
+    </TabPanel>
+}
+else
+{
+    @ChildContent
+}

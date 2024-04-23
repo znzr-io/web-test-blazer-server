@@ -1,0 +1,13 @@
+﻿@namespace web_test_blazer_server.Shared._Core
+@using web_test_blazer_server.Shared._Core;
+@inherits FieldBase_Rating;
+
+@{
+    base.BuildRenderTree(__builder);
+}
+
+
+
+<FW_Main BadgeColor="@BadgeColor" BadgeLabel="@BadgeLabel" ToolTipText="@ToolTipText">
+    <Rating Color="@ColorRating" Disabled="@Disabled" ReadOnly="@ReadOnly" EmptyIcon="@EmptyIcon" EmptyIconStyle="@EmptyIconStyle" FullIcon="@FullIcon" FullIconStyle="@FullIconStyle"  @bind-SelectedValue="@Val" MaxValue="@MaxValue" GetTooltip="@GetTooltip"  />
+</FW_Main>

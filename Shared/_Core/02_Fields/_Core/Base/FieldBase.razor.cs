@@ -1,0 +1,25 @@
+﻿using System;
+using AirtableApiClient;
+using Blazorise;
+using Microsoft.AspNetCore.Components;
+
+
+
+namespace web_test_blazer_server.Shared._Core
+{
+    public abstract partial class FieldBase
+    {
+
+        [Parameter]
+        public string Placeholder { get; set; } = "";
+
+        [Parameter]
+        public string BadgeLabel { get; set; } = "";
+
+        public Color BadgeColor { get; set; } = Color.Dark;
+
+        [Parameter]
+        public string ToolTipText { get; set; } = "";
+    }
+}
+

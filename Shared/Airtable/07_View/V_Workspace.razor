@@ -1,0 +1,12 @@
+﻿@using web_test_blazer_server.Shared.Airtable
+@namespace web_test_blazer_server.Shared.Airtable
+@inherits BaseView;
+
+@{
+    base.BuildRenderTree(__builder);
+}
+
+
+<VW_TabPanel Label="@Label" IsTabContent="@IsTabContent">
+    <W_Tables IdParentMenu="@IdMenuItem" />
+</VW_TabPanel>

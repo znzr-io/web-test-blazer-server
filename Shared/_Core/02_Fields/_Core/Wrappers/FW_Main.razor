@@ -1,0 +1,19 @@
+﻿@namespace  web_test_blazer_server.Shared._Core
+
+
+
+<Field>
+    <div class="input-group mb-3">
+        <span class="input-group-text input-group-text-left" id="basic-addon2">
+            <Icon Name="IconName.AlignLeft" />
+        </span>
+        <span class="input-group-text-center">
+            @ChildContent
+        </span>
+        <span class="input-group-text input-group-text-right" id="basic-addon2">
+            <Tooltip Text="@ToolTipText" Placement="TooltipPlacement.Left" Class="label-badge">
+                <Badge Color="@BadgeColor">@BadgeLabel</Badge>
+            </Tooltip>
+        </span>
+    </div>
+</Field>

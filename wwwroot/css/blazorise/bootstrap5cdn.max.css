@@ -5299,7 +5299,7 @@ fieldset:disabled .btn {
     --bs-alert-bg: transparent;
     --bs-alert-padding-x: 1rem;
     --bs-alert-padding-y: 1rem;
-    --bs-alert-margin-bottom: 1rem;
+    --bs-alert-margin-bottom: .25rem;
     --bs-alert-color: inherit;
     --bs-alert-border-color: transparent;
     --bs-alert-border: 1px solid var(--bs-alert-border-color);
