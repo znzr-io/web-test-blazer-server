@@ -9,7 +9,6 @@ namespace web_test_blazer_server.Shared._Core
 {
     public abstract partial class FieldBase
     {
-
         [Parameter]
         public string Placeholder { get; set; } = "";
 
@@ -20,6 +19,11 @@ namespace web_test_blazer_server.Shared._Core
 
         [Parameter]
         public string ToolTipText { get; set; } = "";
+
+        [Parameter]
+        public bool ReadOnly { get; set; }
+
+        [Parameter]
+        public bool Disabled { get; set; }
     }
 }
-

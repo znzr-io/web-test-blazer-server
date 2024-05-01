@@ -9,15 +9,9 @@ using web_test_blazer_server.Shared._Core;
 
 namespace web_test_blazer_server.Shared._Core
 {
-    public partial class F_Toggle
-	{
-        public F_Toggle()
-        {
-            BadgeColor = Color.Warning;
-        }
-
-
-        void OnToggleChanged(bool value)
+    public partial class F_DateTime_Field
+    {
+        void OnDateChanged(DateTime? value)
         {
             Val = value;
         }

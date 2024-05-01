@@ -12,12 +12,6 @@ namespace web_test_blazer_server.Shared._Core
     public partial class F_Color
 	{
         [Parameter]
-        public bool Disabled { get; set; }
-
-        [Parameter]
-        public bool ReadOnly { get; set; }
-
-        [Parameter]
         public EventCallback<string> OnColorChanged { get; set; }
 
         [Parameter]

@@ -12,15 +12,15 @@ using System.Buffers.Text;
 
 namespace web_test_blazer_server.Data.Airtable
 {
-	public class AgendaTableService : AirtableTableService<AgendaTableData>
+	public class TextService : AirtableTableService<TextData>
 	{
-        public AgendaTableService()
+        public TextService()
         {
-            TABLE_ID = "tblKyJHPXmdqoeH4N";
+            TABLE_ID = "tbl8fwOsk1gm71mbA";
             offset = "";
-            fields = new() { "Name", "Publish", "Location", "Date_From", "Date_Till", "Organizer", "Type", "Notes" };
+            fields = new() { "Name", "En", "Notes", "Section" };
             filterByFormula = "";
-            maxRecords = 100;
+            maxRecords = 1000;
             pageSize = 1;
             //sort;
         }

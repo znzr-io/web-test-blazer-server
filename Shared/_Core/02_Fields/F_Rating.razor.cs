@@ -15,12 +15,6 @@ namespace web_test_blazer_server.Shared._Core
         public Color ColorRating { get; set; } = Color.Primary;
 
         [Parameter]
-        public bool Disabled { get; set; } = false;
-
-        [Parameter]
-        public bool ReadOnly { get; set; } = false;
-
-        [Parameter]
         public IconName EmptyIcon { get; set; } = IconName.Star;
 
         [Parameter]

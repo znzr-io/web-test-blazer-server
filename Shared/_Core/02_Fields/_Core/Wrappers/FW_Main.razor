@@ -3,17 +3,19 @@
 
 
 <Field>
-    <div class="input-group mb-3">
-        <span class="input-group-text input-group-text-left" id="basic-addon2">
-            <Icon Name="IconName.AlignLeft" />
-        </span>
-        <span class="input-group-text-center">
+    <div class="input-group mb-3 field-wrapper-main">
+        <Span class="input-group-text field-left" id="basic-addon2">
+            <Badge Color="@BadgeColor" TextColor="TextColor.White">
+                <Icon Name="@NameIcon" />
+            </Badge>
+        </Span>
+        <span class="field-center">
             @ChildContent
         </span>
-        <span class="input-group-text input-group-text-right" id="basic-addon2">
+        <Span class="input-group-text field-right" id="basic-addon2">
             <Tooltip Text="@ToolTipText" Placement="TooltipPlacement.Left" Class="label-badge">
-                <Badge Color="@BadgeColor">@BadgeLabel</Badge>
+                <Badge Class="bg-white text-black-50">@BadgeLabel</Badge>
             </Tooltip>
-        </span>
+        </Span>
     </div>
 </Field>

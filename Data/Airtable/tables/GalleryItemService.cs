@@ -12,15 +12,15 @@ using System.Buffers.Text;
 
 namespace web_test_blazer_server.Data.Airtable
 {
-	public class TablesTableService : AirtableTableService<TablesTableData>
+	public class GalleryItemService : AirtableTableService<GalleryItemData>
 	{
-        public TablesTableService()
+        public GalleryItemService()
         {
-            TABLE_ID = "tblAUqyvFeH3d12mD";
+            TABLE_ID = "tblztnZRqfVTl8DgN";
             offset = "";
-            fields = new() { "Name", "Workspace", "Max_Rows", "Allow_Add", "Allow_Delete", "Bookmarked", "Bookmark_AddNewRow", "Bookmark_AllowRemoveFrom", "TableID", "TableURL" };
+            fields = new() { "Name", "Notes", "Item", "Button", "Header", "Body", "ReferenceGallery", "ReferenceGalleryThumb"};
             filterByFormula = "";
-            maxRecords = 100;
+            maxRecords = 1000;
             pageSize = 1;
             //sort;
         }

@@ -11,7 +11,7 @@ namespace web_test_blazer_server.Shared._Core
     public abstract partial class FieldBase_Color
 	{
         [Parameter]
-        public string Val { get; set; } = "";
+        public string Val { get; set; } = "#ff0000";
 
         [Parameter]
         public string InitVal { get; set; } = "";

@@ -1,0 +1,19 @@
+﻿using System;
+using AirtableApiClient;
+
+
+
+namespace web_test_blazer_server.Data.Airtable
+{
+	public class GalleryItemData
+    {
+		public string? Name { get; set; }
+        public string? Notes { get; set; }
+        public List<AirtableAttachment>? Item { get; set; }
+        public string? Button { get; set; }
+        public string? Header { get; set; }
+        public string? Body { get; set; }
+        public string[]? ReferenceGallery { get; set; }
+        public string[]? ReferenceGalleryThumb { get; set; }
+    }
+}

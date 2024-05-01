@@ -238,14 +238,114 @@
 
 
 
+/* ############### FIELD WRAPPER ############### */
+
+.field-wrapper-main{
+    display:inline-flex;
+}
+
+.field-left {
+    margin-right: 5px;
+    border-radius: 0.375rem !important;
+}
+
+.field-center {
+    min-width: 50px;
+    width: 50%;
+    flex-grow: 1;
+    margin-right: 5px;
+    display: flex;
+}
+
+.field-center .form-control{
+    width : 100%;
+}
+
+.field-right {
+    width: 28%;
+    border-radius: 0.375rem !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    overflow : hidden;
+}
+
+.field-right .label-badge {
+
+}
+
 /* ############### FIELDS ############### */
 
 .rating-disabled, .rating-readonly {
-    cursor : not-allowed;
-    opacity : 0.5;
+    cursor: not-allowed;
+    opacity: 0.5;
 }
 
 .b-input-color-picker.disabled {
     cursor: not-allowed;
     opacity: 0.5;
+}
+
+.form-control.disabled {
+    background-color: #e9ecef;
+    opacity: 1;
+}
+
+.b-numeric-handler-wrap {
+    position: absolute;
+    top: 0;
+    right: 29%;
+    flex: content;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+}
+
+.b-numeric-handler {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    height: 49%;
+    flex-shrink: 1;
+    width : 32px;
+}
+
+.b-numeric-handler-down i {
+    position: absolute;
+    bottom: 7px;
+    right: 10px;
+}
+
+.b-numeric-handler-up i {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+}
+
+.b-input-color-picker-preview {
+    height: 20px;
+    border-radius: 0.375rem;
+    overflow: hidden;
+}
+
+.b-input-color-picker {
+    padding: 0;
+    border-radius: 0.375rem;
+    overflow: hidden;
+}
+
+.form-control-color, .b-input-color-picker {
+    height: 100%;
+    border-radius: 0.375rem;
+    overflow: hidden;
+}
+
+
+.step-select {
+    width: 85px;
+    margin-right: 30px;
+}
+
+.field-center .b-numeric {
+    margin-right: 4px;
+    flex-grow : .98;
 }

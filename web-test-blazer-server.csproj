@@ -48,6 +48,7 @@
     <None Remove="Shared\_Core\00_Core\BehaviourTree\" />
     <None Remove="Shared\_Core\00_Core\BehaviourTree\Nodes\" />
     <None Remove="Shared\_Core\00_Core\BehaviourTree\Tree\" />
+    <None Remove="Shared\_Core\02_Fields\_Help\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\Airtable\" />
@@ -89,6 +90,7 @@
     <Folder Include="Shared\_Core\00_Core\BehaviourTree\" />
     <Folder Include="Shared\_Core\00_Core\BehaviourTree\Nodes\" />
     <Folder Include="Shared\_Core\00_Core\BehaviourTree\Tree\" />
+    <Folder Include="Shared\_Core\02_Fields\_Help\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Airtable" Version="1.4.0" />

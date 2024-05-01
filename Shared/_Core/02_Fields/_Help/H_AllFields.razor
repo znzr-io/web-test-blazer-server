@@ -2,6 +2,8 @@
 
 @namespace web_test_blazer_server.Shared.Airtable
 
+
+
 <FW_Group HeaderLabel="Text" RowLabel="All Inputs">
     <FW_GroupSub>
         <F_Text_Short Placeholder="text" Val="valueToPlace" ToolTipText="tooltip text" BadgeLabel="Field Text" />
@@ -48,27 +50,100 @@
     </FW_GroupSub>
 </FW_Group>
 
-<FW_Group HeaderLabel="Number" RowLabel="All Inputs">
+<FW_Group HeaderLabel="Number Int" RowLabel="All Inputs">
     <FW_GroupSub>
-        <F_Text_Short Placeholder="place1" Val="valueToPlace" ToolTipText="tooltip text" BadgeLabel="labelText" />
-        <F_Text_Short Placeholder="place2" Val="valueToPlace" />
-        <F_Text_Short Placeholder="place3" Val="valueToPlace" />
+        @code{
+            int valInt = 50;
+            int minInt = 0;
+            int maxInt = 127;
+
+        }
+        <F_Numeric_Int ToolTipText="midi min max int" BadgeLabel="field int"
+                       Val="@valInt" Min="@minInt" Max="@maxInt" />
+
+        <F_Numeric_Int ToolTipText="endless int" BadgeLabel="endless int"
+                       Val="@valInt"  ShowSlider="false"
+                       MinMaxLimitsOverride="@NumericMinMaxLimitsOverride.Ignore" />
     </FW_GroupSub>
     <FW_GroupSub>
-        <F_Text_Short Placeholder="place4" Val="valueToPlace" />
-        <F_Text_Short Placeholder="place5" Val="valueToPlace" />
+        <F_Numeric_Int Disabled="true" ToolTipText="disabled int" BadgeLabel="disabled int"
+                       ShowStepButtons="false" Val="@valInt"/>
+    </FW_GroupSub>
+</FW_Group>
+
+<FW_Group HeaderLabel="Number Decimal" RowLabel="All Inputs">
+    <FW_GroupSub>
+        @code{
+            decimal valDec = (decimal)0.55500;
+            decimal minDec = (decimal)-1.11100;
+            decimal maxDec = (decimal)1.11100;
+
+        }
+        <F_Numeric_Decimal ToolTipText="5 decimals / 0.01 step" BadgeLabel="field deci"
+                           Val="@valDec" Min="@minDec" Max="@maxDec" Decimals="5" Step="(decimal)0.01"/>
+
+        <F_Numeric_Decimal ToolTipText="endless decimals" BadgeLabel="2dec-1stp"
+                           Val="@valDec" Decimals="2" Step="(decimal)0.1" ShowSlider="false"
+                           MinMaxLimitsOverride="@NumericMinMaxLimitsOverride.Ignore" />
+    </FW_GroupSub>
+    <FW_GroupSub>
+        <F_Numeric_Decimal Disabled="true" ToolTipText="disabled decimals" BadgeLabel="disabled deci"
+                           ShowStepButtons="false" Val="@valDec" />
+    </FW_GroupSub>
+</FW_Group>
+
+
+<FW_Group HeaderLabel="Number Currency" RowLabel="All Inputs">
+    <FW_GroupSub>
+        @code{
+            decimal valCur = (decimal)0.55;
+            decimal minCur = (decimal)-110.11;
+            decimal maxCur = (decimal)110.11;
+            string currency = "$";
+
+        }
+        <F_Numeric_Currency ToolTipText="2 decimals / 0.01 step" BadgeLabel="field currency"
+                            Val="@valCur" Min="@minCur" Max="@maxCur" Decimals="2" Step="(decimal)0.01" />
+
+        <F_Numeric_Currency ToolTipText="endless currency" BadgeLabel="endless currency"
+                            Val="@valCur" Decimals="2" Step="(decimal)1" ShowSlider="false"
+                            MinMaxLimitsOverride="@NumericMinMaxLimitsOverride.Ignore" RoundingMethod="NumericRoundingMethod.ToNearest05" />
+    </FW_GroupSub>
+    <FW_GroupSub>
+        <F_Numeric_Currency Disabled="true" ToolTipText="disabled decimals" BadgeLabel="disabled currency"
+                            CurrencySymbol="@currency" ShowStepButtons="false" Val="@valCur" />
+    </FW_GroupSub>
+</FW_Group>
+
+
+
+<FW_Group HeaderLabel="Time" RowLabel="All Inputs">
+    <FW_GroupSub>
+        <F_Time_Field ToolTipText="tooltip time" BadgeLabel="field time" />
+    </FW_GroupSub>
+    <FW_GroupSub>
+        @code{TimeSpan t = new TimeSpan(12, 10, 08, 06, 04);}
+        <F_Time_Field Disabled="true" Val="@t"  ToolTipText="tooltip time disabled" BadgeLabel="time disabled"/>
+    </FW_GroupSub>
+</FW_Group>
+
+<FW_Group HeaderLabel="Date" RowLabel="All Inputs">
+    <FW_GroupSub>
+        <F_Date_Field ToolTipText="tooltip date" BadgeLabel="field date" />
+    </FW_GroupSub>
+    <FW_GroupSub>
+        @code{DateTime d = new DateTime(2012, 12, 21);}
+        <F_Date_Field Disabled="true" Val="@d" ToolTipText="tooltip date disabled" BadgeLabel="date disabled" />
     </FW_GroupSub>
 </FW_Group>
 
 <FW_Group HeaderLabel="Date Time" RowLabel="All Inputs">
     <FW_GroupSub>
-        <F_Text_Short Placeholder="place1" Val="valueToPlace" ToolTipText="tooltip text" BadgeLabel="labelText" />
-        <F_Text_Short Placeholder="place2" Val="valueToPlace" />
-        <F_Text_Short Placeholder="place3" Val="valueToPlace" />
+        <F_DateTime_Field ToolTipText="tooltip date time" BadgeLabel="field date time" />
     </FW_GroupSub>
     <FW_GroupSub>
-        <F_Text_Short Placeholder="place4" Val="valueToPlace" />
-        <F_Text_Short Placeholder="place5" Val="valueToPlace" />
+        @code{DateTime dt = new DateTime(2012, 12, 21, 11, 11, 00);}
+        <F_DateTime_Field Disabled="true" Val="@dt" ToolTipText="tooltip date time disabled" BadgeLabel="date time disabled" />
     </FW_GroupSub>
 </FW_Group>
 
@@ -89,10 +164,19 @@
 
 <FW_Group HeaderLabel="Toggle" RowLabel="All Inputs">
     <FW_GroupSub>
-        <F_Toggle ToolTipText="tooltip text" BadgeLabel="Field Toggle" Val="true"/>
+        <F_Toggle_CheckBox ToolTipText="tooltip text" BadgeLabel="Field Toggle" Val="true"/>
     </FW_GroupSub>
     <FW_GroupSub>
         <F_Toggle_Switch ToolTipText="tooltip text" BadgeLabel="Field Toggle" Val="true" />
+    </FW_GroupSub>
+</FW_Group>
+
+<FW_Group HeaderLabel="Toggle Disabled" RowLabel="All Inputs">
+    <FW_GroupSub>
+        <F_Toggle_CheckBox Disabled="true" ToolTipText="tooltip text" BadgeLabel="Field Toggle" Val="true" />
+    </FW_GroupSub>
+    <FW_GroupSub>
+        <F_Toggle_Switch Disabled="true" ToolTipText="tooltip text" BadgeLabel="Field Toggle" Val="true" />
     </FW_GroupSub>
 </FW_Group>
 

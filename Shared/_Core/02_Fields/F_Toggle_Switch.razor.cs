@@ -11,12 +11,6 @@ namespace web_test_blazer_server.Shared._Core
 {
     public partial class F_Toggle_Switch
 	{
-        public F_Toggle_Switch()
-        {
-            BadgeColor = Color.Warning;
-        }
-
-
         void OnToggleChanged(bool value)
         {
             Val = value;

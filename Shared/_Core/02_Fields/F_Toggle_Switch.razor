@@ -6,11 +6,19 @@
     base.BuildRenderTree(__builder);
 }
 
+@code
+{
+    string extraClass = "form-control";
+}
+@if (Disabled == true)
+{
+    extraClass += " disabled";
+}
 
 
-<FW_Main BadgeColor="@BadgeColor" BadgeLabel="@BadgeLabel" ToolTipText="@ToolTipText">
-    <Switch TValue="bool" Checked="@Val" CheckedChanged="@OnToggleChanged" />
+
+<FW_Main BadgeColor="Color.Danger" BadgeLabel="@BadgeLabel" ToolTipText="@ToolTipText" NameIcon="IconName.Check">
+    <Div class="@extraClass">
+        <Switch Disabled="@Disabled" ReadOnly="@ReadOnly" TValue="bool" Checked="@Val" CheckedChanged="@OnToggleChanged" />
+    </Div>
 </FW_Main>
-
-
-

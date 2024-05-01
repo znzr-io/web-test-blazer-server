@@ -20,6 +20,9 @@ namespace web_test_blazer_server.Shared._Core
 
         [Parameter]
         public RenderFragment? ChildContent { get; set; }
+
+        [Parameter]
+        public IconName NameIcon { get; set; } = IconName.Add;
     }
 }
 

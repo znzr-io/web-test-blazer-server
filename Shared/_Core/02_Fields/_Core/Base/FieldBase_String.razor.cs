@@ -14,12 +14,6 @@ namespace web_test_blazer_server.Shared._Core
         public string? Val { get; set; }
 
         [Parameter]
-        public bool ReadOnly { get; set; }
-
-        [Parameter]
-        public bool Disabled { get; set; }
-
-        [Parameter]
         public int? MaxLength { get; set; }
 
         [Parameter]

@@ -14,4 +14,3 @@ namespace web_test_blazer_server.Shared._Core
         public bool Val { get; set; }
     }
 }
-
