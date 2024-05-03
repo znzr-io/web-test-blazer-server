@@ -1,0 +1,23 @@
+﻿@namespace web_test_blazer_server.Shared._Site
+@inject Pointer_Service pointer_Service;
+
+@inherits BasePage;
+
+@{
+    base.BuildRenderTree(__builder);
+}
+
+
+<CP_HeadContentWebflow Page="home" />
+
+<div Style="height: 100vh; width : 100%; overflow-x: hidden; overflow-y: auto">
+    Websites<br />
+
+    @Air.tables.Count<br />
+    @Air.Table.text.rows.Count<br />
+    @Air.Table.PageElement("home", "SeoMeta") <br />
+    @Air.Table.text.Get("txt-contact-form-invalid")<br />
+    @Air.Table.text.Get("txt-body-about")<br />
+    @Air.Table.text.Get("txt-testing5")<br />
+
+</div>

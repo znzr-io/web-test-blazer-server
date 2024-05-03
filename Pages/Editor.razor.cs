@@ -1,5 +1,6 @@
 ﻿using web_test_blazer_server.Shared._Core;
 using Blazorise;
+using web_test_blazer_server.Shared.Airtable;
 
 
 
@@ -38,6 +39,7 @@ namespace web_test_blazer_server.Pages
 
         protected override async Task OnInitializedAsync()
         {
+            await Air.DeSerializeTables();
             editorView_Service.EditorViewToggled += Toggler;
             editorVisibility_Service.EditorVisibilityToggled += StateHasChanged;
             await Task.CompletedTask;

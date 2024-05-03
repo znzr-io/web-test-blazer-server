@@ -12,7 +12,6 @@
     <None Remove="Data\Airtable\" />
     <None Remove="Data\Nav\" />
     <None Remove="Design\" />
-    <None Remove="Data\Airtable\tables\" />
     <None Remove="Shared\Airtable\" />
     <None Remove="Shared\_Core\" />
     <None Remove="Shared\_Site\" />
@@ -49,12 +48,19 @@
     <None Remove="Shared\_Core\00_Core\BehaviourTree\Nodes\" />
     <None Remove="Shared\_Core\00_Core\BehaviourTree\Tree\" />
     <None Remove="Shared\_Core\02_Fields\_Help\" />
+    <None Remove="Shared\_Site\Pages\" />
+    <None Remove="Shared\Airtable\00_Core\" />
+    <None Remove="Json\" />
+    <None Remove="Shared\Airtable\00_Core\tables\" />
+    <None Remove="Shared\Airtable\00_Core\_Core\" />
+    <None Remove="Shared\_Site\Pages\_Core\" />
+    <None Remove="Shared\_Site\Pages\_Core\Base\" />
+    <None Remove="Shared\_Site\Pages\_Core\Static\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\Airtable\" />
     <Folder Include="Data\Nav\" />
     <Folder Include="Design\" />
-    <Folder Include="Data\Airtable\tables\" />
     <Folder Include="wwwroot\css\blazorise\" />
     <Folder Include="Shared\Airtable\" />
     <Folder Include="Shared\_Core\" />
@@ -91,6 +97,18 @@
     <Folder Include="Shared\_Core\00_Core\BehaviourTree\Nodes\" />
     <Folder Include="Shared\_Core\00_Core\BehaviourTree\Tree\" />
     <Folder Include="Shared\_Core\02_Fields\_Help\" />
+    <Folder Include="wwwroot\css\webflow\" />
+    <Folder Include="wwwroot\js\" />
+    <Folder Include="wwwroot\js\webflow\" />
+    <Folder Include="Shared\_Site\Pages\" />
+    <Folder Include="wwwroot\gfx\" />
+    <Folder Include="Shared\Airtable\00_Core\" />
+    <Folder Include="Json\" />
+    <Folder Include="Shared\Airtable\00_Core\tables\" />
+    <Folder Include="Shared\Airtable\00_Core\_Core\" />
+    <Folder Include="Shared\_Site\Pages\_Core\" />
+    <Folder Include="Shared\_Site\Pages\_Core\Base\" />
+    <Folder Include="Shared\_Site\Pages\_Core\Static\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Airtable" Version="1.4.0" />
@@ -102,5 +120,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\css\blazorise\" />
+    <Content Remove="wwwroot\css\webflow\" />
+    <Content Remove="wwwroot\js\" />
+    <Content Remove="wwwroot\js\webflow\" />
+    <Content Remove="wwwroot\gfx\" />
   </ItemGroup>
 </Project>

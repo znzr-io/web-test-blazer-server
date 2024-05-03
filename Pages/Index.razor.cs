@@ -1,5 +1,6 @@
 ﻿using System;
-using web_test_blazer_server.Data.Airtable;
+using Microsoft.Extensions.Logging;
+using web_test_blazer_server.Shared.Airtable;
 
 
 
@@ -9,8 +10,16 @@ namespace web_test_blazer_server.Pages
 	{
         private async void Start()
         {
-            if (Airtable.Tables.agenda == null || Airtable.Tables.agenda.Count < 1)
-                await Airtable.GetAirtable();
+           // await Air.DeSerializeTable();
+            //if (Air.Table.agenda == null || Air.Table.agenda.Count < 1)
+            //    await Air.GetAirtable();
+        }
+
+        protected override async Task OnInitializedAsync()
+        {
+            await Air.DeSerializeTables();
+            
+            await Task.CompletedTask;
         }
 
         public Index()

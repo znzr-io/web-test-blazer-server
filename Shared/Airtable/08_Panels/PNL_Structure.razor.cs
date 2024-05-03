@@ -2,8 +2,7 @@
 using System.Net.NetworkInformation;
 using Blazorise;
 using Microsoft.AspNetCore.Components;
-using web_test_blazer_server.Data.Airtable;
-using web_test_blazer_server.Shared._Editor;
+
 
 
 namespace web_test_blazer_server.Shared.Airtable
