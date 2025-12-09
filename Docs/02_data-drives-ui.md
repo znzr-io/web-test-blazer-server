@@ -1,4 +1,4 @@
-[← Back to Documentation Index](../README.md)
+[← Back to Project Overview](../README.md)
 
 ---
 
@@ -90,7 +90,7 @@ Example of a fully structured content section (e.g., an Agenda table) showing ho
 
 ---
 
-[← Back to Documentation Index](../README.md)
+[← Back to Project Overview](../README.md)
 * [Detailed Documentation](Docs/01_detailed.md) (Docs/01_detailed.md)
 * [Data Drives UI](Docs/02_data-drives-ui.md) (Docs/02_data-drives-ui.md)
 * [Airtable](Docs/03_review.md) (Docs/03_airtable.md)
