@@ -93,8 +93,8 @@ Example of a fully structured content section (e.g., an Agenda table) showing ho
 [← Back to Project Overview](../README.md)
 * [Detailed Documentation](Docs/01_detailed.md) (Docs/01_detailed.md)
 * [Data Drives UI](Docs/02_data-drives-ui.md) (Docs/02_data-drives-ui.md)
-* [Airtable](Docs/03_review.md) (Docs/03_airtable.md)
-* [Future Vision](Docs/04_detailed.md) (Docs/04_vision.md)
+* [Airtable](Docs/03_airtable.md) (Docs/03_airtable.md)
+* [Future Vision](Docs/04_vision.md) (Docs/04_vision.md)
 * [AI Generated Code Review](Docs/05_review.md) (Docs/05_review.md)
 
 ---
@@ -102,3 +102,5 @@ Example of a fully structured content section (e.g., an Agenda table) showing ho
 to test the current state of the project: please request a key at:
 
 **[arnold@znzr.io](mailto:arnold@znzr.io)**
+
+---

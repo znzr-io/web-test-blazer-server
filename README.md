@@ -129,6 +129,8 @@ A more detailed technical explanation of the architecture and implementation can
 
 ---
 
-to test the current state of the project: please request a key at: 
+to test the current state of the project: please request a key at:
 
 **[arnold@znzr.io](mailto:arnold@znzr.io)**
+
+---
