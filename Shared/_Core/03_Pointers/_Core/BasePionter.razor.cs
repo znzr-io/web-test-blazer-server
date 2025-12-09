@@ -9,10 +9,15 @@ namespace web_test_blazer_server.Shared._Core
 {
 	public partial class BasePionter
     {
+        /*
         public bool IsActive { get; private set; }
         public bool IsFocused { get; private set; }
         public bool HasChildren { get; private set; }
-        public string IDGUI { get; private set; } = "";
+        public string IDGUI_self { get; private set; } = "";
+        public string IDAIRTABLE_self { get; private set; } = "";
+        public string IDGUI_parent { get; private set; } = "";
+        public string IDAIRTABLE_parent { get; private set; } = "";
+
         public BasePionter? ActiveChild { get; private set; }
 
         [Parameter]
@@ -21,6 +26,11 @@ namespace web_test_blazer_server.Shared._Core
         [Parameter]
         public BasePionter? Self { get; set; }
 
+        
+
+        
+
+        */
         [Parameter]
         public string IdMenuItem { get; set; } = "none";
 
@@ -40,6 +50,9 @@ namespace web_test_blazer_server.Shared._Core
         public IconName NameIcon { get; set; }
 
         [Parameter]
+        public string NameIconStr { get; set; } = "";
+
+        [Parameter]
         public Background ColorBackground { get; set; } = Background.Default;
 
         [Parameter]
@@ -49,12 +62,11 @@ namespace web_test_blazer_server.Shared._Core
         protected Color LogColor { get; set; } = Color.Dark;
 
 
-
         protected override async Task OnInitializedAsync()
         {
-            IDGUI = Guid.NewGuid().ToString("N");
-            Self = this;
-            CheckRoot();
+            //IDGUI_self = Guid.NewGuid().ToString("N");
+            //Self = this;
+            //CheckRoot();
             StateHasChanged();
             await Task.CompletedTask;
         }
@@ -63,10 +75,6 @@ namespace web_test_blazer_server.Shared._Core
 
         public virtual async Task OnInvoke()
         {
-            //CheckRoot();
-            //pointer_Service.PointTowards(this);
-            logCatcher_Service.CatchLog(Label, LogDescription, LogColor);
-            //await PointerAction();
             await Task.CompletedTask;
         }
 
@@ -81,38 +89,24 @@ namespace web_test_blazer_server.Shared._Core
 
         public void SetFocused(bool _state)
         {
-            IsFocused = _state;
         }
 
 
 
         public void SetActive(bool _state)
         {
-            IsActive = _state;
         }
 
 
 
         public void SetActiveChild(BasePionter _child)
         {
-            ActiveChild = _child;
         }
 
 
 
         private void CheckRoot()
         {
-            if(pointer_Service != null)
-            {
-                if (IdParentMenu == "root")
-                {
-                    pointer_Service.RegisterPointer(this);
-                    pointer_Service.PointTowards(this);
-                } 
-                else 
-                    pointer_Service.RegisterPointer(this);
-
-            }
         }
     }
 }

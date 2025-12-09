@@ -15,7 +15,7 @@ namespace web_test_blazer_server.Shared.Airtable
         public string? Icon { get; set; }
         public List<AirtableAttachment>? ImageThumbnail { get; set; }
         public List<AirtableAttachment>? ImagePoster { get; set; }
-        public List<AirtableAttachment>? Video { get; set; }
+        public string[]? Background { get; set; }
         public string[]? TextReference { get; set; }
     }
 }

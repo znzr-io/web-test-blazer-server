@@ -17,6 +17,53 @@ namespace web_test_blazer_server.Shared.Airtable
     {
         public TSERVICE? tableService;
         public List<AirtableRecord<TDATA>>? rows;
+        protected string standartField = "";
+
+
+
+        public List<AirtableRecord<TDATA>> RowsById(string[] ids)
+        {
+            List<AirtableRecord<TDATA>> r = new();
+
+            foreach (string id in ids)
+            {
+                AirtableRecord<TDATA> t = rows.SingleOrDefault(t => t.Id == id);
+                if(t != null)
+                    r.Add(t);
+            }
+                
+            return r;
+        }
+
+
+
+        public AirtableRecord<TDATA> RowById(string id)
+        {
+            AirtableRecord<TDATA> r = rows.SingleOrDefault(t => t.Id == id);
+
+            System.Console.WriteLine($"AirtableTable.cs rows {rows} = {rows.Count} : {id}");
+
+            return r;
+        }
+
+
+
+
+        public string Get(string _nameField)
+        {
+            return Get(_nameField, standartField);
+        }
+
+
+
+        public virtual string Get(string _nameField, string _resultField)
+        {
+            string result = "null";
+
+            return result;
+        }
+
+
 
 
 

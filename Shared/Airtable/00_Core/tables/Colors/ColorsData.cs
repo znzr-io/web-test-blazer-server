@@ -12,6 +12,6 @@ namespace web_test_blazer_server.Shared.Airtable
         public int? R { get; set; }
         public int? G { get; set; }
         public int? B { get; set; }
-        public List<AirtableAttachment>? ImageIngredient { get; set; }
+        public float? A { get; set; }
     }
 }

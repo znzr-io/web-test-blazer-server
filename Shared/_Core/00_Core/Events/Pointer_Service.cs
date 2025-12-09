@@ -20,6 +20,7 @@ namespace web_test_blazer_server.Shared._Editor
 
         public Pointer CurrentPointer { get; set; } = new();
 
+        /*
         public string CurrentMenuItem { get; set; } = "";
 
         public string CurrentParentMenu { get; set; } = "";
@@ -33,6 +34,8 @@ namespace web_test_blazer_server.Shared._Editor
         public int AmountMenus { get { return GetAmountMenus(); } }
 
         public int AmountPointers { get { return GetAmountPointers(); } }
+        */
+
 
         public class Pointer
         {
@@ -45,13 +48,6 @@ namespace web_test_blazer_server.Shared._Editor
 
         public void PointTowards(BasePionter _self)
         {
-            //System.Console.WriteLine("Pointer_Service.PointTowards() : " + _self.IdMenuItem);
-
-            ////CreatePointer(_self);
-            ////SetAllPointers();
-            //DeactivateAllPointers();
-            //CreatePath();
-
             //ServiceAction?.Invoke();
         }
 
@@ -59,15 +55,13 @@ namespace web_test_blazer_server.Shared._Editor
 
         public void RegisterPointer(BasePionter _self)
         {
-            //CreatePointer(_self);
-            //SetAllPointers();
         }
 
 
 
         private int GetPathDepth()
         {
-            int v = CurrentPath.Count;
+            int v = 0;//CurrentPath.Count;
 
             return v;
         }
@@ -76,7 +70,7 @@ namespace web_test_blazer_server.Shared._Editor
 
         private int GetAmountMenus()
         {
-            int v = AllPointers.Count;
+            int v = 0; // AllPointers.Count;
 
             return v;
         }
@@ -86,18 +80,6 @@ namespace web_test_blazer_server.Shared._Editor
         private int GetAmountPointers()
         {
             int v = 0;
-
-            foreach (KeyValuePair<string, Dictionary<string, Pointer>> entry in AllPointers)
-            {
-                foreach (KeyValuePair<string, Pointer> p in entry.Value)
-                {
-                    if (p.Value != null)
-                    {
-                        v++;
-                    }
-                }
-            }
-
             return v;
         }
 
@@ -105,51 +87,18 @@ namespace web_test_blazer_server.Shared._Editor
 
         private void CreatePointer(BasePionter _self)
         {
-            CurrentMenuItem = _self.IdMenuItem;
-            CurrentParentMenu = _self.IdParentMenu;
-
-            CurrentPointer = new();
-            CurrentPointer.IdParentMenu = CurrentParentMenu;
-            CurrentPointer.Self = _self;
         }
 
 
 
         private void CreatePath()
         {
-            CurrentPath = new();
-
-            if(CurrentPointer.Self != null)
-            {
-                CurrentPointer.Self.SetActive(true);
-                CurrentPointer.Self.SetFocused(true);
-            }
-
-            GetParents(CurrentPointer);
-            CurrentPath.Add(CurrentPointer);
         }
 
 
 
         private void GetParents(Pointer p)
         {
-            Pointer parent;
-
-            //System.Console.WriteLine($"Pointer_Service.GetParents s[  {p.Self.IdParentMenu}  ]");
-
-            if (p.Self != null)
-            {
-                if (p.Self.IdParentMenu != "" && p.Self.IdParentMenu != null && p.Self.IdParentMenu != "root")
-                {
-                    parent = SearchParent(p.Self.IdParentMenu, p);
-
-                    if (parent != null)
-                    {
-                        GetParents(parent);
-                        CurrentPath.Add(parent);
-                    }
-                }
-            }
         }
 
 
@@ -157,31 +106,6 @@ namespace web_test_blazer_server.Shared._Editor
         private Pointer SearchParent(string _idParentMenu, Pointer _child)
         {
             Pointer parent = new();
-
-            foreach (KeyValuePair<string, Dictionary<string, Pointer>> parentMenuId in AllPointers)
-            {
-                if(parentMenuId.Key != _idParentMenu)
-                {
-                    foreach (KeyValuePair<string, Pointer> p in parentMenuId.Value)
-                    {
-                        //check for sibling pointers? > changing tables = changing dropdowns
-                        //set them active but remove from the breadcrumbs
-
-                        //System.Console.WriteLine($"Pointer_Service.GetParents s[  {p.Value.Self.IdMenuItem}  ] : p[  {_idParentMenu}  ] : pp[  {p.Value.Self.IdParentMenu}  ]");
-
-                        if (p.Value != null && p.Value.Self.IdMenuItem == _idParentMenu)
-                        {
-                            System.Console.WriteLine($"Pointer_Service.SearchParents s[  {p.Value.Self.IdMenuItem}  ] : p[  {_idParentMenu}  ] : pp[  {p.Value.Self.IdParentMenu}  ]");
-                            parent = p.Value;
-                            if(parent.Self != null)
-                            {
-                                parent.Self.SetActiveChild(_child.Self);
-                                parent.Self.SetActive(true);
-                            }   
-                        }
-                    }
-                }
-            }
             return parent;
         }
 
@@ -189,40 +113,12 @@ namespace web_test_blazer_server.Shared._Editor
 
         private void SetAllPointers()
         {
-            if(CurrentPointer.Self != null)
-            {
-                if (AllPointers.ContainsKey(CurrentPointer.IdParentMenu))
-                {
-                    AllPointers[CurrentPointer.IdParentMenu].TryAdd(CurrentPointer.Self.IDGUI, CurrentPointer);
-                }
-
-                else
-                {
-                    Dictionary<string, Pointer> pointers = new();
-                    pointers.Add(CurrentPointer.Self.IDGUI, CurrentPointer);
-                    AllPointers.TryAdd(CurrentPointer.IdParentMenu, pointers);
-                }
-            }
         }
 
 
 
         private void DeactivateAllPointers()
         {
-            foreach (KeyValuePair<string, Dictionary<string, Pointer>> entry in AllPointers)
-            {
-                foreach (KeyValuePair<string, Pointer> p in entry.Value)
-                {
-                    if (p.Value != null)
-                    {
-                        if (p.Value.Self != null)
-                        {
-                            p.Value.Self.SetActive(false);
-                            p.Value.Self.SetFocused(false);
-                        }
-                    }
-                }
-            }
         }
     }
 }

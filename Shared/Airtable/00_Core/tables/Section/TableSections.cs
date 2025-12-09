@@ -24,6 +24,25 @@ namespace web_test_blazer_server.Shared.Airtable
 
 
 
+        public SectionData GetRecord(string _nameField)
+        {
+            SectionData result = new();
+
+            if (rows != null)
+            {
+                AirtableRecord<SectionData>? p = rows.SingleOrDefault(t => t.Fields.Name == _nameField);
+
+                if (p != null)
+                {
+                    result = p.Fields;
+                }
+            }
+
+            return result;
+        }
+
+
+
         public override async Task GetTable()
         {
             await base.GetTable();

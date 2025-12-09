@@ -21,6 +21,14 @@ namespace web_test_blazer_server.Shared.Airtable
             public static TableWorkspaces workspaces = new();
             public static TableTables tables = new();
 
+            public static TableMediaCollectionContent mediaCollectionContent = new();
+            public static TableMediaCollectionWebsite mediaCollectionWebsite = new();
+            public static TableMediaYoutube mediaYoutube = new();
+            public static TableMediaImage mediaImage = new();
+            public static TableMediaVideo mediaVideo = new();
+            public static TableMediaSpline mediaSpline = new();
+            public static TableMediaLottie mediaLottie = new();
+
             public static TableText text = new();
             public static TableSettings settings = new();
             public static TablePages pages = new();
@@ -31,6 +39,7 @@ namespace web_test_blazer_server.Shared.Airtable
             public static TableAgenda agenda = new();
             public static TableContact contact = new();
             public static TableColors colors = new();
+            public static TableDishIngredients dishIngredients = new();
 
 
 

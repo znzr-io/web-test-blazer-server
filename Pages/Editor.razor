@@ -1,5 +1,6 @@
 ﻿@page "/editor"
-
+@inject IJSRuntime JS
+@inject NavigationManager navManager
 @using web_test_blazer_server.Shared.Airtable
 @using web_test_blazer_server.Shared._Editor
 @using web_test_blazer_server.Pages
@@ -8,7 +9,7 @@
 @inject EditorView_Service editorView_Service;
 @inject EditorVisibility_Service editorVisibility_Service;
 
-    
+
 
 
 <CP_HeadContentWebflow Page="home" />
@@ -16,22 +17,22 @@
 
 
 <PageTitle>Editor</PageTitle>
-<P_Hidden IdParentMenu="root" IdMenuItem="editor" />
+<P_Hidden />
 
 <div class="row">
     @if (editorVisibility_Service.ShowEditor == true)
     {
         <Splitter Style="height: 100vh;">
-            <SplitterSection Style="height: 100%;" Size="100">
+            <SplitterSection Style="height: 100%; overflow-x: hidden; overflow-y:scroll" Size="100">
                 <PNL_Website />
             </SplitterSection>
             <SplitterSection MinSize="430" Style="height: 100%;">
                 <Splitter Direction="SplitterDirection.Vertical" Style="height: 100%; overflow: hidden; padding: 3px;">
                     <SplitterSection MinSize="120" Style="@editorUpperSplit">
-                        <PNL_Selection IdParentMenu="editor" IdMenuItem="selection" />
+                        <PNL_Selection />
                     </SplitterSection>
                     <SplitterSection MinSize="250" Style="@editorDownSplit">
-                        <PNL_Structure IdParentMenu="editor" IdMenuItem="workspace" />
+                        <PNL_Structure />
                     </SplitterSection>
                 </Splitter>
             </SplitterSection>

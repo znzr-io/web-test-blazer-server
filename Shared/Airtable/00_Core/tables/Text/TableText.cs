@@ -16,6 +16,7 @@ namespace web_test_blazer_server.Shared.Airtable
     {
         public TableText()
         {
+            standartField = "En";
             fileName = "text";
             tableService = new();
             rows = new();
@@ -27,36 +28,24 @@ namespace web_test_blazer_server.Shared.Airtable
         public override async Task GetTable()
         {
             await base.GetTable();
-
-            /*
-            var t = Table.text.SingleOrDefault(t => t.Fields.Name == "txt-button-about");
-            Console.WriteLine("TEXT.txt-button-about: " + t.Fields.En);
-            */
         }
 
 
 
-        public string Get(string textField)
-        {
-            return Get(textField, "En");
-        }
-
-
-
-        public string Get(string textField, string lang)
+        public override string Get(string _nameField, string _resultField)
         {
             string result = "null";
 
-            if(rows != null)
+            if (rows != null)
             {
-                var p = rows.SingleOrDefault(t => t.Fields.Name == textField);
+                var p = rows.SingleOrDefault(t => t.Fields.Name == _nameField);
 
-                if (p != null && lang != null && p.Fields.GetProperty(lang) != null)
+                if (p != null && _resultField != null && p.Fields.GetProperty(_resultField) != null)
                 {
-                    var s = p.Fields.GetProperty(lang);
-                    if(s != null)
+                    var s = p.Fields.GetProperty(_resultField);
+                    if (s != null)
                         result = (string)s;
-                }  
+                }
             }
 
             return result;

@@ -16,8 +16,6 @@
     <None Remove="Shared\_Core\" />
     <None Remove="Shared\_Site\" />
     <None Remove="Shared\Airtable\Actions\_Core\" />
-    <None Remove="Shared\Airtable\_Core\" />
-    <None Remove="Shared\Airtable\_Core\Enums\" />
     <None Remove="Shared\Airtable\01_Displays\" />
     <None Remove="Shared\Airtable\03_Pointers\" />
     <None Remove="Shared\Airtable\06_Widgets\" />
@@ -51,22 +49,45 @@
     <None Remove="Shared\_Site\Pages\" />
     <None Remove="Shared\Airtable\00_Core\" />
     <None Remove="Json\" />
-    <None Remove="Shared\Airtable\00_Core\tables\" />
     <None Remove="Shared\Airtable\00_Core\_Core\" />
     <None Remove="Shared\_Site\Pages\_Core\" />
     <None Remove="Shared\_Site\Pages\_Core\Base\" />
     <None Remove="Shared\_Site\Pages\_Core\Static\" />
+    <None Remove="Shared\Airtable\00_Core\Static\" />
+    <None Remove="Shared\Airtable\00_Core\Enums\" />
+    <None Remove="Shared\_Projects\" />
+    <None Remove="Shared\_Projects\FoodEscape\" />
+    <None Remove="Shared\_Projects\FoodEscape\Style\" />
+    <None Remove="Shared\_Site\Sections\Agenda\" />
+    <None Remove="Shared\_Site\Sections\_Core\" />
+    <None Remove="Shared\_Site\Sections\_Core\Wrappers\" />
+    <None Remove="Shared\_Site\Sections\_Core\Base\" />
+    <None Remove="Shared\_Site\Sections\Welcome\" />
+    <None Remove="Shared\_Site\Sections\About\" />
+    <None Remove="Shared\_Site\Sections\Contact\" />
+    <None Remove="Shared\_Site\Nav\MainPages\" />
+    <None Remove="Shared\_Site\Nav\Section\" />
+    <None Remove="Shared\_Site\Sections\Dish\" />
+    <None Remove="Shared\_Site\Sections\Gallery\" />
+    <None Remove="Shared\Airtable\00_Core\Tables\MediaYoutube\" />
+    <None Remove="Shared\Airtable\00_Core\Tables\MediaCollectionContent\" />
+    <None Remove="Shared\Airtable\00_Core\Tables\MediaCollectionWebsite\" />
+    <None Remove="Shared\_Site\Components\" />
+    <None Remove="Shared\_Site\Components\Background\" />
+    <None Remove="Shared\_Site\Components\Background\_Core\" />
+    <None Remove="Shared\Airtable\00_Core\Tables\MediaImage\" />
+    <None Remove="Shared\Airtable\00_Core\Tables\MediaVideo\" />
+    <None Remove="Shared\Airtable\00_Core\Tables\MediaSpline\" />
+    <None Remove="Shared\Airtable\00_Core\Tables\MediaLottie\" />
+    <None Remove="Shared\Airtable\00_Core\Tables\_Core\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Data\Airtable\" />
-    <Folder Include="Data\Nav\" />
     <Folder Include="Design\" />
+    <Folder Include="Docs\gfx\" />
     <Folder Include="wwwroot\css\blazorise\" />
     <Folder Include="Shared\Airtable\" />
     <Folder Include="Shared\_Core\" />
     <Folder Include="Shared\_Site\" />
-    <Folder Include="Shared\Airtable\_Core\" />
-    <Folder Include="Shared\Airtable\_Core\Enums\" />
     <Folder Include="Shared\Airtable\01_Displays\" />
     <Folder Include="Shared\Airtable\03_Pointers\" />
     <Folder Include="Shared\Airtable\06_Widgets\" />
@@ -104,18 +125,48 @@
     <Folder Include="wwwroot\gfx\" />
     <Folder Include="Shared\Airtable\00_Core\" />
     <Folder Include="Json\" />
-    <Folder Include="Shared\Airtable\00_Core\tables\" />
     <Folder Include="Shared\Airtable\00_Core\_Core\" />
     <Folder Include="Shared\_Site\Pages\_Core\" />
     <Folder Include="Shared\_Site\Pages\_Core\Base\" />
     <Folder Include="Shared\_Site\Pages\_Core\Static\" />
+    <Folder Include="Shared\Airtable\00_Core\Static\" />
+    <Folder Include="Shared\Airtable\00_Core\Enums\" />
+    <Folder Include="Shared\_Projects\" />
+    <Folder Include="Shared\_Projects\FoodEscape\" />
+    <Folder Include="Shared\_Projects\FoodEscape\Style\" />
+    <Folder Include="wwwroot\lottie\" />
+    <Folder Include="wwwroot\spline\" />
+    <Folder Include="wwwroot\svg\" />
+    <Folder Include="Shared\_Site\Sections\Agenda\" />
+    <Folder Include="Shared\_Site\Sections\_Core\" />
+    <Folder Include="Shared\_Site\Sections\_Core\Wrappers\" />
+    <Folder Include="Shared\_Site\Sections\_Core\Base\" />
+    <Folder Include="Shared\_Site\Sections\Welcome\" />
+    <Folder Include="Shared\_Site\Sections\About\" />
+    <Folder Include="Shared\_Site\Sections\Contact\" />
+    <Folder Include="Shared\_Site\Nav\MainPages\" />
+    <Folder Include="Shared\_Site\Nav\Section\" />
+    <Folder Include="Shared\_Site\Sections\Dish\" />
+    <Folder Include="Shared\_Site\Sections\Gallery\" />
+    <Folder Include="Shared\Airtable\00_Core\Tables\MediaYoutube\" />
+    <Folder Include="Shared\Airtable\00_Core\Tables\MediaCollectionContent\" />
+    <Folder Include="Shared\Airtable\00_Core\Tables\MediaCollectionWebsite\" />
+    <Folder Include="Shared\_Site\Components\" />
+    <Folder Include="Shared\_Site\Components\Background\" />
+    <Folder Include="Shared\_Site\Components\Background\_Core\" />
+    <Folder Include="Shared\Airtable\00_Core\Tables\MediaImage\" />
+    <Folder Include="Shared\Airtable\00_Core\Tables\MediaVideo\" />
+    <Folder Include="Shared\Airtable\00_Core\Tables\MediaSpline\" />
+    <Folder Include="Shared\Airtable\00_Core\Tables\MediaLottie\" />
+    <Folder Include="Shared\Airtable\00_Core\Tables\_Core\" />
+    <Folder Include="wwwroot\unity\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Airtable" Version="1.4.0" />
-    <PackageReference Include="Blazorise.Bootstrap5" Version="1.5.1" />
-    <PackageReference Include="Blazorise.Icons.FontAwesome" Version="1.5.1" />
-    <PackageReference Include="Blazorise.Splitter" Version="1.5.1" />
-    <PackageReference Include="Blazorise.Components" Version="1.5.1" />
+    <PackageReference Include="Blazorise.Bootstrap5" Version="1.5.2" />
+    <PackageReference Include="Blazorise.Icons.FontAwesome" Version="1.5.2" />
+    <PackageReference Include="Blazorise.Splitter" Version="1.5.2" />
+    <PackageReference Include="Blazorise.Components" Version="1.5.2" />
     <PackageReference Include="BuildWebCompiler" Version="1.12.405" />
   </ItemGroup>
   <ItemGroup>
@@ -124,5 +175,8 @@
     <Content Remove="wwwroot\js\" />
     <Content Remove="wwwroot\js\webflow\" />
     <Content Remove="wwwroot\gfx\" />
+    <Content Remove="wwwroot\lottie\" />
+    <Content Remove="wwwroot\spline\" />
+    <Content Remove="wwwroot\svg\" />
   </ItemGroup>
 </Project>

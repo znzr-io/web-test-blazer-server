@@ -12,7 +12,7 @@ namespace web_test_blazer_server.Shared.Airtable
     {
         public override async Task NewItemSelected(IconLabelSet _item)
         {
-            base.NewItemSelected(_item);
+            await base.NewItemSelected(_item);
 
             await Task.CompletedTask;
         }

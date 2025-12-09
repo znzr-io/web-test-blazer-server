@@ -1,8 +1,8 @@
 ﻿using web_test_blazer_server.Shared._Core;
 using Blazorise;
 using web_test_blazer_server.Shared.Airtable;
-
-
+using Microsoft.AspNetCore.Components;
+using Microsoft.JSInterop;
 
 namespace web_test_blazer_server.Pages
 {
@@ -15,6 +15,7 @@ namespace web_test_blazer_server.Pages
         EditorSplitView currentView = EditorSplitView.center;
         APreBase_EditorView? viewTop;
         APreBase_EditorView? viewBot;
+        string _previousLocation = "";
 
         protected string editorUpperSplit = "";
         protected string editorDownSplit = "";
@@ -26,6 +27,22 @@ namespace web_test_blazer_server.Pages
             center,
             bottomShow,
             bottomHide
+        }
+
+
+
+        protected override async Task OnAfterRenderAsync(bool firstRender)
+        {
+            if (firstRender)
+            {
+                await JS.InvokeAsync<IJSObjectReference>("import", "../js/webflow/webflow.js");
+            }
+            else if (_previousLocation != navManager.Uri)
+            {
+                await JS.InvokeVoidAsync("Refresh");
+            }
+
+            _previousLocation = navManager.Uri;
         }
 
 

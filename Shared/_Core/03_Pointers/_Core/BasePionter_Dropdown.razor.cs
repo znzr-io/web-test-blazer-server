@@ -13,13 +13,13 @@ namespace web_test_blazer_server.Shared._Core
         Dropdown dropdown = new();
 
         [Parameter]
-        public string? SelectedItem { get; set; } = "-";
+        public string SelectedItem { get; set; } = "-";
 
         [Parameter]
-        public string? SelectedIcon { get; set; } = "-";
+        public string SelectedIcon { get; set; } = "-";
 
         [Parameter]
-        public string? Group1Label { get; set; } = "-";
+        public string Group1Label { get; set; } = "-";
 
         [Parameter]
         public bool DynamicIcon { get; set; }
@@ -47,7 +47,7 @@ namespace web_test_blazer_server.Shared._Core
             logCatcher_Service.CatchLog(SelectedItem, "selected");
 
             if (DynamicIcon)
-                NameIcon = (IconName)_item.NameIcon;
+                NameIconStr = _item.NameIconStr;
 
             if (ShowLabel)
                 Label = SelectedItem;

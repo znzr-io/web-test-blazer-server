@@ -18,7 +18,7 @@ namespace web_test_blazer_server.Shared.Airtable
         {
             TABLE_ID = "tblztnZRqfVTl8DgN";
             offset = "";
-            fields = new() { "Name", "Notes", "Item", "Button", "Header", "Body", "ReferenceGallery", "ReferenceGalleryThumb"};
+            fields = new() { "Name", "Notes", "MediaContent", "Button", "Header", "Body", "ReferenceGallery", "ReferenceGalleryThumb"};
             filterByFormula = "";
             maxRecords = 1000;
             pageSize = 1;

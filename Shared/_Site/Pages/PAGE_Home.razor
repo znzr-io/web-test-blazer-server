@@ -1,6 +1,8 @@
-﻿@namespace web_test_blazer_server.Shared._Site
+﻿@using AirtableApiClient;
+@using web_test_blazer_server.Shared._Projects;
+@using web_test_blazer_server.Shared.Airtable;
+@namespace web_test_blazer_server.Shared._Site
 @inject Pointer_Service pointer_Service;
-
 @inherits BasePage;
 
 @{
@@ -8,16 +10,76 @@
 }
 
 
-<CP_HeadContentWebflow Page="home" />
 
-<div Style="height: 100vh; width : 100%; overflow-x: hidden; overflow-y: auto">
-    Websites<br />
+@code{
+    string pageName = "home";
+}
 
-    @Air.tables.Count<br />
-    @Air.Table.text.rows.Count<br />
-    @Air.Table.PageElement("home", "SeoMeta") <br />
-    @Air.Table.text.Get("txt-contact-form-invalid")<br />
-    @Air.Table.text.Get("txt-body-about")<br />
-    @Air.Table.text.Get("txt-testing5")<br />
+<CP_HeadContentWebflow Page="@pageName" />
+<FE_Style />
 
-</div>
+
+<N_Section>
+
+    @foreach (AirtableRecord<SectionData> s in Air.Table.sections.rows)
+        {
+        @foreach (string p in s.Fields.Pages)
+            {
+                @if (Air.Table.pages.RowById(p) != null && Air.Table.pages.RowById(p).Fields.Name == @pageName)
+                    {
+                <N_SectionItem Record="@s.Fields" />
+                }
+            }
+        }
+
+</N_Section>
+
+
+
+
+
+<C_WelcomeSection Id="welcome" Section="@Air.Table.sections.GetRecord("welcome")" />
+
+
+<C_AboutSection Id="about" Section="@Air.Table.sections.GetRecord("about")" />
+
+
+    <C_Galleries Id="served" Section="@Air.Table.sections.GetRecord("served")" Records="Air.Table.gallery">
+
+        @foreach (AirtableRecord<GalleryData> r in Air.Table.gallery.rows)
+        {
+        <C_Gallery Record="@r.Fields">
+
+            @foreach (string id in r.Fields.Items)
+            {
+            <C_GalleryItem Record="@Air.Table.galleryItem.RowById(id)" />
+            }
+
+        </C_Gallery>
+        }
+
+    </C_Galleries>
+
+
+
+<C_DishSection Id="okonomiyaki" Section="@Air.Table.sections.GetRecord("okonomiyaki")" Records="Air.Table.dishIngredients">
+
+    @foreach (AirtableRecord<DishIngredientsData> r in Air.Table.dishIngredients.rows)
+    {
+        <C_DishIngredient Record="@r.Fields" />
+    }
+
+</C_DishSection>
+
+
+<C_AgendaSection Id="agenda" Section="@Air.Table.sections.GetRecord("agenda")" Records="Air.Table.agenda">
+
+    @foreach (AirtableRecord<AgendaData> r in Air.Table.agenda.rows)
+    {
+        <C_AgendaItem Record="@r.Fields" />
+    }
+
+</C_AgendaSection>
+
+
+<C_ContactSection Id="contact" Section="@Air.Table.sections.GetRecord("contact")" />

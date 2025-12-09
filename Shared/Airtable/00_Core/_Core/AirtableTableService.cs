@@ -15,7 +15,7 @@ namespace web_test_blazer_server.Shared.Airtable
 	public class AirtableTableService<TABLE>
 
     {
-        protected string TABLE_ID = "";
+        public string TABLE_ID = "";
         protected string offset = "";
         protected List<string> fields = new() {};
         protected string filterByFormula = "";

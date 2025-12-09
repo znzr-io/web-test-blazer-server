@@ -1,10 +1,4 @@
-﻿using Microsoft.AspNetCore.Components;
-using Microsoft.AspNetCore.Components.Web;
-using web_test_blazer_server.Data;
-using web_test_blazer_server.Data.Nav;
-using web_test_blazer_server.Shared._Core;
-using web_test_blazer_server.Shared._Site;
-using web_test_blazer_server.Shared._Editor;
+﻿using web_test_blazer_server.Shared._Editor;
 using web_test_blazer_server.Shared.Airtable;
 
 
@@ -19,9 +13,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
-
-builder.Services.AddSingleton<MainNavMenuService>();
-builder.Services.AddSingleton<WeatherForecastService>();
 
 builder.Services.AddScoped<Pointer_Service>();
 builder.Services.AddScoped<LogCatcher_Service>();

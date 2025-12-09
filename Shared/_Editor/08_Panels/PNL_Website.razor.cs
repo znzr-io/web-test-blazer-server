@@ -9,30 +9,32 @@ namespace web_test_blazer_server.Shared._Editor
 {
 	public partial class PNL_Website
     {
-        protected string CurrentMenuItem
-        {
-            get
-            {
-                string label = "null";
-                if (pointer_Service.CurrentPointer.Self != null)
-                    label = pointer_Service.CurrentPointer.Self.IdMenuItem;
+        /*
+       protected string CurrentMenuItem
+       {
+           get
+           {
+               string label = "null";
+               if (pointer_Service.CurrentPointer.Self != null)
+                   label = pointer_Service.CurrentPointer.Self.IdMenuItem;
 
-                return label;
-            }
-        }
+               return label;
+           }
+       }
 
-        protected string CurrentParentMenu { get { return pointer_Service.CurrentPointer.IdParentMenu; } }
+       protected string CurrentParentMenu { get { return pointer_Service.CurrentPointer.IdParentMenu; } }
 
-        protected Dictionary<string, Dictionary<string, Pointer_Service.Pointer>> AllPointers { get { return pointer_Service.AllPointers; } }
 
-        protected string AmountMenus { get { return pointer_Service.AmountMenus.ToString(); } }
+       protected Dictionary<string, Dictionary<string, Pointer_Service.Pointer>> AllPointers { get { return pointer_Service.AllPointers; } }
 
-        protected string AmountPointers { get { return pointer_Service.AmountPointers.ToString(); } }
+       protected string AmountMenus { get { return pointer_Service.AmountMenus.ToString(); } }
 
-        protected List<Pointer_Service.Pointer> CurrentPath { get { return pointer_Service.CurrentPath; } }
+       protected string AmountPointers { get { return pointer_Service.AmountPointers.ToString(); } }
 
-        protected string PathDepth { get { return pointer_Service.PathDepth.ToString(); } }
+       protected List<Pointer_Service.Pointer> CurrentPath { get { return pointer_Service.CurrentPath; } }
 
+       protected string PathDepth { get { return pointer_Service.PathDepth.ToString(); } }
+       */
 
 
         protected override async Task OnInitializedAsync()

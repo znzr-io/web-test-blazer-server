@@ -14,5 +14,6 @@ namespace web_test_blazer_server.Shared.Airtable
         public string? DateTill { get; set; }
         public string? Location { get; set; }
         public string? Notes { get; set; }
+        public string? Link { get; set; }
     }
 }

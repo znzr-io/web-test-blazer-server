@@ -2,6 +2,7 @@
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    overflow-x: clip;
 }
 
 h1:focus {
@@ -99,3 +100,6 @@ a, .btn-link {
 }
 
 
+section{
+    min-height: 100vh;
+}
