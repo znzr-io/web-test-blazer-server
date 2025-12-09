@@ -1,8 +1,8 @@
-# Vision: Meta-Framework Platform
+[← Back to Documentation Index](../README.md)
 
 ---
 
-[← Back to Documentation Index](../index.md)
+# Vision: Event & Data Driven Framework/Platform
 
 ---
 
@@ -693,7 +693,15 @@ This meta-framework enables infinite extensibility, automated deployments, and g
 
 ---
 
-[← Back to Documentation Index](../index.md)
+[← Back to Documentation Index](../README.md)
+* [Detailed Documentation](Docs/01_detailed.md) (Docs/01_detailed.md)
+* [Data Drives UI](Docs/02_data-drives-ui.md) (Docs/02_data-drives-ui.md)
+* [Airtable](Docs/03_review.md) (Docs/03_airtable.md)
+* [Future Vision](Docs/04_detailed.md) (Docs/04_vision.md)
+* [AI Generated Code Review](Docs/05_review.md) (Docs/05_review.md)
 
 ---
 
+to test the current state of the project: please request a key at:
+
+**[arnold@znzr.io](mailto:arnold@znzr.io)**

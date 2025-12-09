@@ -121,11 +121,14 @@ A more detailed technical explanation of the architecture and implementation can
 
 ---
 
-* [Detailed Documentation](Docs/detailed.md) (Docs/detailed.md)
-* [Data Drives UI](Docs/data-drives-ui.md) (Docs/data-drives-ui.md)
-* [Airtable](Docs/review.md) (Docs/airtable.md)
-* [Future Vision](Docs/detailed.md) (Docs/vision.md)
-* [AI Generated Code Review](Docs/review.md) (Docs/review.md)
+* [Detailed Documentation](Docs/01_detailed.md) (Docs/01_detailed.md)
+* [Data Drives UI](Docs/02_data-drives-ui.md) (Docs/02_data-drives-ui.md)
+* [Airtable](Docs/03_review.md) (Docs/03_airtable.md)
+* [Future Vision](Docs/04_detailed.md) (Docs/04_vision.md)
+* [AI Generated Code Review](Docs/05_review.md) (Docs/05_review.md)
 
 ---
 
+to test the current state of the project: please request a key at: 
+
+**[arnold@znzr.io](mailto:arnold@znzr.io)**

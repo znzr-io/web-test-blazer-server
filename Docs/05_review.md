@@ -1,10 +1,10 @@
-# AI Generated Codebase Analysis
-
-Deep Dive Into Architectural Health and Complexity
+[← Back to Documentation Index](../README.md)
 
 ---
 
-[← Back to Documentation Index](../index.md)
+# AI Generated Codebase Analysis
+
+Deep Dive Into Architectural Health and Complexity
 
 ---
 
@@ -301,7 +301,6 @@ The codebase demonstrates solid architectural thinking and good separation of co
 
 ### Low-Priority Debt
 
-* Template pages (Counter, FetchData) can be removed
 * Some code comments could be more detailed
 * Minor naming inconsistencies
 
@@ -341,6 +340,17 @@ The refactoring roadmap is achievable because the current architecture already e
 
 ---
 
-[← Back to Documentation Index](../index.md)
+[← Back to Documentation Index](../README.md)
+* [Detailed Documentation](Docs/01_detailed.md) (Docs/01_detailed.md)
+* [Data Drives UI](Docs/02_data-drives-ui.md) (Docs/02_data-drives-ui.md)
+* [Airtable](Docs/03_review.md) (Docs/03_airtable.md)
+* [Future Vision](Docs/04_detailed.md) (Docs/04_vision.md)
+* [AI Generated Code Review](Docs/05_review.md) (Docs/05_review.md)
+
+---
+
+to test the current state of the project: please request a key at:
+
+**[arnold@znzr.io](mailto:arnold@znzr.io)**
 
 ---

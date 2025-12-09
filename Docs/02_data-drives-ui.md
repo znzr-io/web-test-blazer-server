@@ -1,3 +1,7 @@
+[← Back to Documentation Index](../README.md)
+
+---
+
 # Data > UI
 
 This document provides a visual introduction to how Airtable structures its data into bases, workspaces, tables, sections, and record content. The images below illustrate typical Airtable Editor UI, the cached JSON output and how those are used to drive the UI generation.
@@ -85,3 +89,16 @@ Example of a fully structured content section (e.g., an Agenda table) showing ho
 ```
 
 ---
+
+[← Back to Documentation Index](../README.md)
+* [Detailed Documentation](Docs/01_detailed.md) (Docs/01_detailed.md)
+* [Data Drives UI](Docs/02_data-drives-ui.md) (Docs/02_data-drives-ui.md)
+* [Airtable](Docs/03_review.md) (Docs/03_airtable.md)
+* [Future Vision](Docs/04_detailed.md) (Docs/04_vision.md)
+* [AI Generated Code Review](Docs/05_review.md) (Docs/05_review.md)
+
+---
+
+to test the current state of the project: please request a key at:
+
+**[arnold@znzr.io](mailto:arnold@znzr.io)**
