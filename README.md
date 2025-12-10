@@ -1,4 +1,4 @@
-# Blazor Schema-Driven UI Generator
+# Blazor/Airtable Schema-Driven UI Generator
 
 Project overview
 
