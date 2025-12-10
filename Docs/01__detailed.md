@@ -41,7 +41,7 @@ The system implements several core patterns:
 
 ---
 
-[← Back to Project Overview](../README.md)
+[← Project Overview](../README.md)
 * [Detailed Documentation](01__detailed.md) (01__detailed.md)
   * [Review](01a0_review.md) (01a0_review.md)
   * [Architecture](01a1_architecture.md) (01a1_architecture.md)
