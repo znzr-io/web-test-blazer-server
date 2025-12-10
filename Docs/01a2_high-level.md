@@ -134,7 +134,7 @@ Maps strongly-typed enums to CSS icon class names. This is a lightweight utility
   * [Review](01a0_review.md) (01a0_review.md)
   * [Architecture](01a1_architecture.md) (01a1_architecture.md)
   * [High-Level](01a2_high-level.md) (01a2_high-level.md)
-  * [Shared/_Core](01b1_shared-core) (01b1_shared-core)
+  * [Shared/_Core](01b1_shared-core.md) (01b1_shared-core)
   * [Shared/_Editor](01b2_shared-editor.md) (01b2_shared-editor.md)
   * [Shared/_Sites](01b3_shared-sites.md) (01b3_shared-sites.md)
   * [Shared/Airtable](01b4_shared-airtable.md) (01b4_shared-airtable.md)
