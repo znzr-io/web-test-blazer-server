@@ -56,6 +56,8 @@ namespace web_test_blazer_server.Shared.Airtable
 
             using (AirtableBase airtableBase = new AirtableBase(Air.API_KEY, Air.BASE_ID))
             {
+               
+                
                 //
                 // Use 'offset' and 'pageSize' to specify the records that you want
                 // to retrieve.
@@ -86,7 +88,7 @@ namespace web_test_blazer_server.Shared.Airtable
                     {
                         records.AddRange(response.Records.ToList());
                         offset = response.Offset;
-
+                        
                     }
                     else if (response.AirtableApiError is AirtableApiException)
                     {

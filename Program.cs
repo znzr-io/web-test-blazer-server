@@ -35,12 +35,11 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Error");
 }
 
+AirtableConfig.Initialize(builder.Configuration);
+
+
 app.UseStaticFiles();
 app.UseRouting();
 app.MapBlazorHub();
 app.MapFallbackToPage("/_Host");
 app.Run();
-
-
-
-

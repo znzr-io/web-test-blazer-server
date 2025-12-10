@@ -125,7 +125,6 @@
     <Folder Include="wwwroot\gfx\" />
     <Folder Include="Shared\Airtable\00_Core\" />
     <Folder Include="Json\" />
-    <Folder Include="Shared\Airtable\00_Core\_Core\" />
     <Folder Include="Shared\_Site\Pages\_Core\" />
     <Folder Include="Shared\_Site\Pages\_Core\Base\" />
     <Folder Include="Shared\_Site\Pages\_Core\Static\" />

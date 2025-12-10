@@ -1,17 +1,11 @@
-﻿using System;
-using System.ComponentModel;
-using System.IO;
-using System.Text.Json;
-using AirtableApiClient;
-using web_test_blazer_server.Shared._Editor;
-
-
-namespace web_test_blazer_server.Shared.Airtable
+﻿namespace web_test_blazer_server.Shared.Airtable
 {
 	public static class Air
 	{
         public static readonly string BASE_ID = "appw7gx55EkqWeWrs";
-        public static readonly string API_KEY = "patPlJVFWYpPWYR0z.994e57da7debd9f777f139c65ca7d44c86af9373e6855cede2092718c90b15af";
+        //#### REQUEST API KEY FROM ARNOLD@ZNZR.IO
+        public static string API_KEY = AirtableConfig.ApiKey;
+
         public static Dictionary<string, AirtableTableBase> tables = new();
 
 

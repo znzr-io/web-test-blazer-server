@@ -13,7 +13,8 @@
       "launchBrowser": true,
       "applicationUrl": "http://localhost:5236",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "AIRTABLE__ApiKey": "patgbaHJqCXzZXMO4.1dc649c6f33c351dbd5b69bd627a572c8eb6138ad26cd30454bd720c3bf54cc9"
       },
       "dotnetRunMessages": true
     },
