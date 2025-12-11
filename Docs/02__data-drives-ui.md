@@ -104,6 +104,53 @@ Example of a fully structured content section (e.g., an Agenda table) showing ho
 
 ---
 
+# PROJECT CONFIGURATION
+
+---
+
+Early-stage screenshots of custom Airtable interfaces designed to handle project administration, pipeline orchestration, and Azure service integration.
+
+---
+
+## 1. Azure Services
+
+![Airtable Azure_Services](gfx/08_azure_services.png)
+
+---
+
+## 2. Domain Configuration
+
+![Airtable Admin_Domains](gfx/09_admin_domains.png)
+
+---
+
+## 3a. Api Management
+
+![Airtable Admin_Api_Management](gfx/10_admin_api.png)
+
+---
+
+## 3b. Api Configuration
+
+![Airtable Admin_Api_Config](gfx/10_admin_api_detail.png)
+
+---
+
+## 4. Automated Tasks
+
+![Airtable Automated_Tasks](gfx/11_automated_tasks.png)
+
+---
+
+## 5. Automated CI/CD
+
+![Airtable Automated_CiCd](gfx/12_automated_cicd.png)
+
+---
+
+
+
+
 [← Project Overview](../README.md)
 * [Detailed Documentation](01__detailed.md) (01__detailed.md)
   * [Review](01a0_review.md) (01a0_review.md)
