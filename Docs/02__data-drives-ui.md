@@ -138,13 +138,13 @@ Early-stage screenshots of custom Airtable interfaces designed to handle project
 
 ## 4. Automated Tasks
 
-![Airtable Automated_Tasks](gfx/11_automated_tasks.png)
+![Airtable Automated_Tasks](gfx/11_automated_tasking.png)
 
 ---
 
 ## 5. Automated CI/CD
 
-![Airtable Automated_CiCd](gfx/12_automated_cicd.png)
+![Airtable Automated_CiCd](gfx/12_automated_deployment.png)
 
 ---
 
