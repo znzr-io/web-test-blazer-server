@@ -110,6 +110,8 @@ Example of a fully structured content section (e.g., an Agenda table) showing ho
 
 Early-stage screenshots of custom Airtable interfaces designed to handle project administration, pipeline orchestration, and Azure service integration.
 
+These are a part of the collecti0ons of Admin tables the will be completly integrated in the Generative UI rendering.
+
 ---
 
 ## 1. Azure Services
